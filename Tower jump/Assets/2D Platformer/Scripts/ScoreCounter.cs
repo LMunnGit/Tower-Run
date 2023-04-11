@@ -21,7 +21,7 @@ public class ScoreCounter : MonoBehaviour
         scoreColl.gameObject.AddComponent<EdgeCollider2D>();
 
         // Size the collider
-       
+        scoreColl.GetComponent<EdgeCollider2D>().transform.localScale = new Vector2(Screen.width/100, 0f);
 
         // make collider a trigger
         scoreColl.GetComponent<EdgeCollider2D>().isTrigger = true;

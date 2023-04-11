@@ -65,7 +65,7 @@ namespace Platformer
                 animator.SetFloat("Speed", Mathf.Abs(moveInput)); // Turn on run animation   
             }
 
-            if(Input.GetMouseButtonDown(0))
+            if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
             {
                 CheckGround();
                 if (isGrounded)
