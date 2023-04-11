@@ -20,8 +20,8 @@ namespace Platformer
         private bool almostGrounded;
         public Transform groundCheck;
         [SerializeField] private float preJumpTime;
-        private bool canJump = false;
         private bool deathJump = true;
+        private bool singleJump = false;
 
         private Rigidbody2D rb;
         private Collider2D coll;
@@ -49,11 +49,6 @@ namespace Platformer
 
         void Update()
         {
-            if (canJump)
-            {
-                Jump();
-                canJump = false;
-            }
 
             if (deathState == false) // if is alive
             {
@@ -76,7 +71,7 @@ namespace Platformer
                 if (isGrounded)
                 {
                     Jump();
-                } else
+                } else if (singleJump == false)
                 {
                     StartCoroutine(CheckGroundCoroutine());
                 }  
@@ -148,7 +143,11 @@ namespace Platformer
             Vector2 box = new Vector2 (0.5f, 0.2f);
             Collider2D[] colliders = Physics2D.OverlapBoxAll(groundCheck.transform.position, box, 0f);
             isGrounded = colliders.Length > 1;
-
+            // change to make sure that the colliders are platforms
+            if (isGrounded)
+            {
+                singleJump = false;
+            }  
         }
 
         IEnumerator CheckGroundCoroutine()
@@ -157,21 +156,21 @@ namespace Platformer
     deathJump = false;
     while (elapsedTime < 0.25f)
     {
-        if (Physics2D.OverlapBoxAll(groundCheck.transform.position, new Vector2(0.5f, 0.2f), 0f).Length > 1)
+        CheckGround();
+        if (isGrounded)
         {
             // Perform jump if player touches the ground
             yield return new WaitForSeconds(0.05f);
-            canJump = true;
+            Jump();
             yield break;
-        } else
-        {
-            canJump = false;
         }
 
         elapsedTime += Time.deltaTime;
         yield return null;
     }
+    singleJump = true;
     deathJump = true;
+    yield break;
 }
 
     // Jump

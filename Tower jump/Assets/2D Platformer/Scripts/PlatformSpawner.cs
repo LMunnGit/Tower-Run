@@ -11,7 +11,7 @@ public class PlatformSpawner : MonoBehaviour
 [SerializeField] private GameObject[] platformRight;
 
 
-private float towerHeight;
+public float towerHeight;
 public float chunkSize;
 public int chunkHeight;
 public bool chunkRight;

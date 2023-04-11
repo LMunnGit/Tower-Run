@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7759671634261657314}
   - component: {fileID: 3869353584129155879}
   - component: {fileID: 3869353584129155876}
-  - component: {fileID: 3869353584129155877}
   - component: {fileID: 3869353584129155874}
+  - component: {fileID: 4946170381874468932}
   m_Layer: 0
   m_Name: Crumbling platform
   m_TagString: Untagged
@@ -136,18 +136,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &3869353584129155877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3869353584129155872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a2aeefe12f630a47aa5f1f9d7f7fdde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &3869353584129155874
 Animator:
   serializedVersion: 5
@@ -169,6 +157,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4946170381874468932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3869353584129155872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2aeefe12f630a47aa5f1f9d7f7fdde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script: {fileID: 3912380647683523956}
 --- !u!1 &3869353585832916863
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +179,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3869353585832916862}
+  - component: {fileID: 3912380647683523956}
   m_Layer: 0
   m_Name: Crumbling Platform
   m_TagString: Untagged
@@ -201,3 +203,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3912380647683523956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3869353585832916863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66d2a81469a66b42891e0618e65c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plat: {fileID: 3869353584129155872}

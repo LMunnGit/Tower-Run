@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8449264904349772628}
+  - component: {fileID: 3012314904724641412}
   m_Layer: 0
-  m_Name: Small Crumbling Platform 1
+  m_Name: Small Crumbling Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,6 +33,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3012314904724641412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449264904349772629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66d2a81469a66b42891e0618e65c932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plat: {fileID: 8449264906034888458}
 --- !u!1 &8449264906034888458
 GameObject:
   m_ObjectHideFlags: 0
@@ -47,7 +61,7 @@ GameObject:
   - component: {fileID: 8449264906034888456}
   - component: {fileID: 1064056367176450442}
   m_Layer: 0
-  m_Name: Crumbling platform
+  m_Name: Small Crumbling platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2aeefe12f630a47aa5f1f9d7f7fdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  script: {fileID: 3012314904724641412}
 --- !u!95 &8449264906034888456
 Animator:
   serializedVersion: 5

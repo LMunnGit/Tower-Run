@@ -5,11 +5,13 @@ using UnityEngine;
 public class CrumblingPlatform : MonoBehaviour
 {
     private Animator anim;
+    [SerializeField] private RespawnPlatform script;
 
     void Start()
     {
         anim = GetComponent<Animator>(); 
     }
+
     void OnTriggerEnter2D (Collider2D collider)
     {
         if (collider.tag == "Player")
@@ -28,16 +30,10 @@ public class CrumblingPlatform : MonoBehaviour
         anim.SetTrigger("FastShake");
         yield return new WaitForSeconds(1f);
 
-        Destroy(gameObject); // change to disable collider and visuals
-        StartCoroutine("Respawn");
+        script.StartCoroutine("Respawn");
+        gameObject.SetActive(false); // disable platform
         yield break;
 
-    }
-
-    IEnumerator Respawn()
-    {
-        yield return new WaitForSeconds(4f);
-        // enable collider and visuals
     }
 
 }
