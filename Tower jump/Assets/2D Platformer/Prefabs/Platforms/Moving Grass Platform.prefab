@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9210645326582943634}
   - component: {fileID: 4501114369739707308}
   - component: {fileID: 1274767516273952479}
-  - component: {fileID: 1055144040185217480}
   - component: {fileID: 1055144040185217483}
   m_Layer: 0
   m_Name: Moving Grass Platform
@@ -113,27 +112,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &1055144040185217480
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8419907162070733295}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 10
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 6
 --- !u!114 &1055144040185217483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,5 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8ad5b2f2067e74e92522bc3cba5d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  idle: 0
+  speed: 2.5

@@ -11,11 +11,10 @@ GameObject:
   - component: {fileID: 3171039125858711997}
   - component: {fileID: 3171039125858711996}
   - component: {fileID: 3171039125858711994}
-  - component: {fileID: 3171039125858711995}
-  - component: {fileID: 9141754307800951362}
   - component: {fileID: 9141754307800951372}
   - component: {fileID: 9141754307800951373}
   - component: {fileID: 9141754307800951363}
+  - component: {fileID: 3171039125858711995}
   m_Layer: 0
   m_Name: Moving Floor
   m_TagString: Untagged
@@ -107,46 +106,12 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -1.140763, y: 0.3659814}
+  - {x: -0.5914714, y: 0.36675882}
   - {x: 1.1568971, y: 0.36923242}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &3171039125858711995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3171039125858711999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f1945fa2a6538b46946409bbcab8b82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coll: {fileID: 3171039125858711994}
-  player: {fileID: 0}
---- !u!50 &9141754307800951362
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3171039125858711999}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 10
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 6
 --- !u!68 &9141754307800951372
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -157,14 +122,15 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.1759572, y: -0.1898961}
-  - {x: -1.1751384, y: 0.21702433}
+  - {x: -1.1759572, y: 0.25751162}
+  - {x: -1.1759572, y: 0.26418877}
+  - {x: -1.1751384, y: 0.3171897}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -179,14 +145,14 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 1.1841812, y: 0.20798159}
-  - {x: 1.1940427, y: -0.21702433}
+  - {x: 1.1908591, y: 0.31482553}
+  - {x: 1.1940427, y: 0.23706102}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -203,5 +169,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8ad5b2f2067e74e92522bc3cba5d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  idle: 0
+  speed: 2.5
+--- !u!114 &3171039125858711995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3171039125858711999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1945fa2a6538b46946409bbcab8b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coll: {fileID: 3171039125858711994}
+  player: {fileID: 0}

@@ -4,41 +4,34 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-private Rigidbody2D rb;
 [SerializeField] private float speed;
-[SerializeField] private float idle;
 private int dir;
-private bool isIdle;
-
+// collision without rigidbody
 void Start()
 {
-    rb = GetComponent<Rigidbody2D>();
     dir = 1;
-    isIdle = false;
 }
 
 void Update()
 {
-    rb.MovePosition(transform.position + new Vector3(dir, 0f) * speed * Time.deltaTime);
-    if (isIdle) // setup idle it dont work right now
-    {
-        StartCoroutine(Idle());
-    }
+    transform.position = Vector3.MoveTowards(transform.position, transform.position + transform.right * dir, speed * Time.deltaTime); // remove rigidbody
 }
 
+// for platform
 void OnCollisionEnter2D(Collision2D collision)
 {
     if (collision.gameObject.tag == "Wall")
     {
         dir *= -1;
-        isIdle = true;
+        Debug.Log("there");
     }
 }
-
-IEnumerator Idle()
+// for floor
+void OnTriggerEnter2D(Collider2D collider)
 {
-yield return new WaitForSeconds(idle);
-isIdle = false;
-yield break;
+    if (collider.tag == "Wall")
+    {
+        dir *= -1;
+    }
 }
 }
