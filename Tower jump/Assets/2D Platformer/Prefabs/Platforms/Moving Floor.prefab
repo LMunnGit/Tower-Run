@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 3171039125858711997}
   - component: {fileID: 3171039125858711996}
   - component: {fileID: 3171039125858711994}
-  - component: {fileID: 9141754307800951372}
-  - component: {fileID: 9141754307800951373}
   - component: {fileID: 9141754307800951363}
   - component: {fileID: 3171039125858711995}
   m_Layer: 0
@@ -112,51 +110,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!68 &9141754307800951372
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3171039125858711999}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -1.1759572, y: 0.25751162}
-  - {x: -1.1759572, y: 0.26418877}
-  - {x: -1.1751384, y: 0.3171897}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!68 &9141754307800951373
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3171039125858711999}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 1.1908591, y: 0.31482553}
-  - {x: 1.1940427, y: 0.23706102}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!114 &9141754307800951363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8ad5b2f2067e74e92522bc3cba5d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
+  speed: 2
+  raySize: 1.175
 --- !u!114 &3171039125858711995
 MonoBehaviour:
   m_ObjectHideFlags: 0

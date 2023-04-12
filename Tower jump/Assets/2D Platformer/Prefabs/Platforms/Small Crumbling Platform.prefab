@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plat: {fileID: 8449264906034888458}
+  respawnTime: 2
 --- !u!1 &8449264906034888458
 GameObject:
   m_ObjectHideFlags: 0

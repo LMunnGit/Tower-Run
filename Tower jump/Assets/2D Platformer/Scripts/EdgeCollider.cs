@@ -49,7 +49,7 @@ public class EdgeCollider : MonoBehaviour
     //Generate world space point information for position and scale calculations
         cameraPos = Camera.main.transform.position;
         screenSize.x = Vector2.Distance (Camera.main.ScreenToWorldPoint(new Vector2(0,0)),Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0))) * 0.5f;
-        screenSize.y = Vector2.Distance (Camera.main.ScreenToWorldPoint(new Vector2(0,0)),Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height))) * 0.5f;
+        screenSize.y = Vector2.Distance (Camera.main.ScreenToWorldPoint(new Vector2(0,0)),Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height*3))) * 0.5f;
        
     //Change our scale and positions to match the edges of the screen...   
         rightCollider.localScale = new Vector3(colDepth, screenSize.y * 2, colDepth);

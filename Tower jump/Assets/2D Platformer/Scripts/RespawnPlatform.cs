@@ -5,9 +5,10 @@ using UnityEngine;
 public class RespawnPlatform : MonoBehaviour
 {
     [SerializeField] private GameObject plat;
+    [SerializeField] float respawnTime;
     public IEnumerator Respawn()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(respawnTime);
         plat.SetActive(true); // enable platform
         // enable collider and visuals
     }
