@@ -544,8 +544,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b836fa3924ba5443b2586fd496ed032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObject: {fileID: 462004725}
+  sizer: {fileID: 462004734}
   anchorType: 3
   anchorOffset: {x: 1.175, y: -1, z: 0}
+--- !u!114 &462004734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462004725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0822356a2100df7438772fa6e83df62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectToScale: {fileID: 462004725}
+  naturalObjectSize: 1
+  screenResolutionWidth: 1080
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,8 +837,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b836fa3924ba5443b2586fd496ed032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObject: {fileID: 680968506}
+  sizer: {fileID: 680968512}
   anchorType: 0
   anchorOffset: {x: 1.33, y: 2.07, z: 0}
+--- !u!114 &680968512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680968506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0822356a2100df7438772fa6e83df62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectToScale: {fileID: 680968506}
+  naturalObjectSize: 1
+  screenResolutionWidth: 1080
 --- !u!1 &689895117
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8175817786529214200, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1326923
+      value: -1.1934211
       objectReference: {fileID: 0}
     - target: {fileID: 8175817786529214200, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
       propertyPath: m_LocalPosition.y
@@ -931,7 +965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9210645326582943634, guid: 5639c50675365944db8010caace54146, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.97769225
+      value: -1.038421
       objectReference: {fileID: 0}
     - target: {fileID: 9210645326582943634, guid: 5639c50675365944db8010caace54146, type: 3}
       propertyPath: m_LocalPosition.y

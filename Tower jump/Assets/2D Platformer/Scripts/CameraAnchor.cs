@@ -39,6 +39,8 @@ public class CameraAnchor : MonoBehaviour {
 		TopCenter,
 		TopRight,
 	};
+	public GameObject gameObject;
+	public ScreenResolutionSizer sizer;
 	public AnchorType anchorType;
 	public Vector3 anchorOffset;
 
@@ -103,6 +105,16 @@ public class CameraAnchor : MonoBehaviour {
 		if (!transform.position.Equals(newPos)) {
 			transform.position = newPos;
 		}
+		// second offset
+		float offset = sizer.naturalObjectSize - gameObject.transform.localScale.x; // Calculate offset
+        if (gameObject.transform.position.x > 0)
+        {
+        gameObject.transform.position = new Vector3(transform.position.x + offset, transform.position.y, transform.position.z);
+        }
+        if (gameObject.transform.position.x < 0)
+        {
+        gameObject.transform.position = new Vector3(transform.position.x - offset, transform.position.y, transform.position.z);
+        }
 	}
 
 #if UNITY_EDITOR
