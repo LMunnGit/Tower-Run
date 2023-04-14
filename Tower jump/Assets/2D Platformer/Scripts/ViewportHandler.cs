@@ -27,6 +27,9 @@ public class ViewportHandler : MonoBehaviour
     private Vector3 _tl;
     private Vector3 _tc;
     private Vector3 _tr;
+
+    // custom screen
+    private Vector3 _custom;
     #endregion
 
     #region PROPERTIES
@@ -87,6 +90,11 @@ public class ViewportHandler : MonoBehaviour
             return _tr;
         }
     }
+    public Vector3 Custom {
+        get {
+            return _custom;
+        }
+    }
     #endregion
 
     #region METHODS
@@ -130,7 +138,7 @@ public class ViewportHandler : MonoBehaviour
         //*** top
         _tl = new Vector3(leftX, topY, 0);
         _tc = new Vector3(cameraX, topY , 0);
-        _tr = new Vector3(rightX, topY, 0);           
+        _tr = new Vector3(rightX, topY, 0);          
     }
 
     private void Update()

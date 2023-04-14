@@ -105,6 +105,7 @@ public class CameraAnchor : MonoBehaviour {
 		if (!transform.position.Equals(newPos)) {
 			transform.position = newPos;
 		}
+
 		// second offset
 		float offset = sizer.naturalObjectSize - gameObject.transform.localScale.x; // Calculate offset
         if (gameObject.transform.position.x > 0)
