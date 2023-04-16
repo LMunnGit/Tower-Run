@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 482664848965117184}
   - component: {fileID: 482664848965117185}
   - component: {fileID: 482664848965117214}
-  - component: {fileID: 482664848965117187}
+  - component: {fileID: -4342884531511488782}
   m_Layer: 0
   m_Name: Small floor
   m_TagString: Untagged
@@ -97,7 +97,7 @@ EdgeCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
@@ -108,17 +108,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &482664848965117187
-MonoBehaviour:
+--- !u!251 &-4342884531511488782
+PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482664848965117215}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f1945fa2a6538b46946409bbcab8b82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coll: {fileID: 482664848965117214}
-  player: {fileID: 0}
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
