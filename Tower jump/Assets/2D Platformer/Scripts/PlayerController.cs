@@ -70,6 +70,7 @@ namespace Platformer
                 CheckGround();
                 if (isGrounded)
                 {
+                    rb.velocity = new Vector2(rb.velocity.x, 0f);
                     Jump();
                 } else if (singleJump == false)
                 {
@@ -154,7 +155,7 @@ namespace Platformer
 {
     float elapsedTime = 0f;
     deathJump = false;
-    while (elapsedTime < 0.25f)
+    while (elapsedTime < preJumpTime)
     {
         CheckGround();
         if (isGrounded)

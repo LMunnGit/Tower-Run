@@ -18,7 +18,7 @@ public void OnTriggerEnter2D(Collider2D other)
 {
     if (other.tag == "Player")
     {
-        scoreCounter.score += 1; // add 1 to the score
+        scoreCounter.score++; // add 1 to the score
         transform.position = new Vector2(transform.position.x, transform.position.y + scoreCounter.scoreSize);
     }
 }

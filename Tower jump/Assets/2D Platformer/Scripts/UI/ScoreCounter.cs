@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ScoreCounter : MonoBehaviour
 {
-    public float score; // player score
     public float scoreSize;
+    public float score; // player score
 
     private Transform scoreColl;
+    [SerializeField] private ScoreManager scoreManager;
 
     void Awake()
     {
@@ -32,6 +33,6 @@ public class ScoreCounter : MonoBehaviour
 
     void Update()
     {
-              
+      scoreManager.score = score;       
     }
 }

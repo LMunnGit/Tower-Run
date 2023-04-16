@@ -11,7 +11,7 @@ public class Exit : MonoBehaviour
     public void Exm()
     {
         Debug.Log("EXIT");
-        SceneManager.LoadScene("HomeScreen");
+        SceneManager.LoadScene("Game");
         
     }
 
