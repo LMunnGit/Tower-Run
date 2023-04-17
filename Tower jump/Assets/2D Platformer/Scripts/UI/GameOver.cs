@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    [SerializeField] public GameObject gameOver;
-    [SerializeField] private Transform button;
+    [SerializeField] private GameObject gameOver;
+    [SerializeField] private Manager manager; 
 
     public float buttonExtraHeight;   
 
@@ -21,16 +21,6 @@ public class GameOver : MonoBehaviour
        SceneManager.LoadScene(SceneManager.GetActiveScene().name);    
     }
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0) && gameOver.activeSelf == true)
-        {
-            if (Input.mousePosition.y > button.position.y + buttonExtraHeight)
-            {
-                Restart();
-            }
-        }
-    }
 
 
 }

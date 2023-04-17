@@ -7,12 +7,11 @@ using UnityEngine.SceneManagement;
 public class Exit : MonoBehaviour
 {
     public TextMeshProUGUI button;
+    [SerializeField] Manager manager;
     // Exit game
-    public void Exm()
+    public void Home()
     {
-        Debug.Log("EXIT");
-        SceneManager.LoadScene("Game");
-        
+        manager.Setup();     
     }
 
 

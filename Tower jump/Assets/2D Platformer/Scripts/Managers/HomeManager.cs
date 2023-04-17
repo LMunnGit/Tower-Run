@@ -7,10 +7,13 @@ public class HomeManager : MonoBehaviour
     public GameObject home;
     public GameObject options;
     public GameObject score;
+    public ScoreCounter scoreCounter;
+    private ScoreClimb scoreClimb;
 
     void Start()
     {
         Time.timeScale = 0; 
+        scoreClimb = GameObject.Find("ScoreCollider").GetComponent<ScoreClimb>();
     }
 
     public void StartGame()
@@ -18,8 +21,10 @@ public class HomeManager : MonoBehaviour
         if (!options.activeInHierarchy)
         {
             Time.timeScale = 1;
-            home.SetActive(false);  
+            home.SetActive(false); 
             score.SetActive(true);
+            scoreCounter.score = 0;
+            scoreClimb.Setup();
         }
     } 
 

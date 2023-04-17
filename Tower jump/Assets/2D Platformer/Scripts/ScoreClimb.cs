@@ -9,7 +9,10 @@ private ScoreCounter scoreCounter;
 void Start()
 {
     scoreCounter = GameObject.Find("ScoreCounter").GetComponent<ScoreCounter>(); // add script
+}
 
+public void Setup()
+{
     // Set starting position
     transform.position = new Vector2(0f, scoreCounter.scoreSize);
 }

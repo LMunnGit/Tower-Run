@@ -35,16 +35,6 @@ namespace Platformer
             rb = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
             coll = GetComponent<BoxCollider2D>();
-
-            // Spawn on opposite side of the starting platform
-            if (spawner.chunkRight == true)
-            {
-                transform.position = playerSpawn[0].position;
-            } else if (spawner.chunkRight == false)
-            {
-                transform.position = playerSpawn[1].position;
-                Flip();
-            }
         }
 
         void Update()
@@ -90,6 +80,24 @@ namespace Platformer
                 Flip();
             }
 
+            }
+
+            if (deathState == true)
+            {
+                animator.SetBool("IsDead", false); // if isDead
+            }
+        }
+
+        public void Spawn()
+        {
+            // Spawn on opposite side of the starting platform
+            if (spawner.chunkRight == true)
+            {
+                transform.position = playerSpawn[0].position;
+            } else if (spawner.chunkRight == false)
+            {
+                transform.position = playerSpawn[1].position;
+                Flip();
             }
         }
 
