@@ -80,11 +80,13 @@ namespace Platformer
                 Flip();
             }
 
+            animator.SetBool("IsDead", false); // if isAlive
+
             }
 
             if (deathState == true)
             {
-                animator.SetBool("IsDead", false); // if isDead
+                animator.SetBool("IsDead", true); // if isDead
             }
         }
 
