@@ -7,6 +7,7 @@ public class PlatformSpawner : MonoBehaviour
 [SerializeField] private Transform player;
 [SerializeField] private Transform cam;
 [SerializeField] private Transform spawner;
+[SerializeField] public Transform chunks;
 [SerializeField] private GameObject[] platformLeft;
 [SerializeField] private GameObject[] platformRight;
 
@@ -21,6 +22,11 @@ public int num;
 
 void Start()
 {
+ 
+}
+
+public void Setup()
+{
     // Randomize starting chunk
     if (Random.value > 0.5f)
     {
@@ -31,7 +37,7 @@ void Start()
     }
     
     // Setup
-    spawner.position = new Vector2(0, 0);
+    spawner.position = new Vector3(0, 0, 0);
     SpawnPlatform();
     
     towerHeight = chunkSize;
@@ -55,11 +61,13 @@ void SpawnPlatform()
     if (chunkRight == true)
     {
         num = Random.Range(0, platformRight.Length);
-        Instantiate(platformRight[num], new Vector3(x, spawner.position.y, 0), Quaternion.identity, null);
+        var platRight = Instantiate(platformRight[num], new Vector3(x, spawner.position.y, 0), Quaternion.identity, null);
+        platRight.transform.parent = chunks.transform;
     } else if (chunkRight == false)
     {
         num = Random.Range(0, platformLeft.Length);
-        Instantiate(platformLeft[num], new Vector3(x, spawner.position.y, 0), Quaternion.identity, null);
+        var platLeft = Instantiate(platformLeft[num], new Vector3(x, spawner.position.y, 0), Quaternion.identity, null);
+        platLeft.transform.parent = chunks.transform;
     }
     chunkRight = !chunkRight;
     chunkHeight++;

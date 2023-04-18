@@ -25,7 +25,8 @@ namespace Platformer
 
         private Rigidbody2D rb;
         private Collider2D coll;
-        private Animator animator;
+        [HideInInspector]
+        public Animator animator;
         [SerializeField] private PlatformSpawner spawner;
         public Transform[] playerSpawn = new Transform[2];
         public GameObject gameOver;
@@ -47,12 +48,10 @@ namespace Platformer
             {
                 Vector3 direction = transform.right;
                 transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, movingSpeed * Time.deltaTime);
-                animator.SetFloat("Speed", Mathf.Abs(moveInput)); // Turn on run animation
             } else if (facingRight == false)
             {
                 Vector3 direction = transform.right * -1f;
                 transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, movingSpeed * Time.deltaTime);
-                animator.SetFloat("Speed", Mathf.Abs(moveInput)); // Turn on run animation   
             }
 
             if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
@@ -82,11 +81,6 @@ namespace Platformer
 
             animator.SetBool("IsDead", false); // if isAlive
 
-            }
-
-            if (deathState == true)
-            {
-                animator.SetBool("IsDead", true); // if isDead
             }
         }
 
@@ -188,6 +182,7 @@ namespace Platformer
         public void Jump()
         {
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+            animator.SetTrigger("IsJumping");
         }
 
         private void Death()
