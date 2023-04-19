@@ -8,6 +8,7 @@ public class Exit : MonoBehaviour
 {
     public TextMeshProUGUI button;
     [SerializeField] Manager manager;
+    
     // Exit game
     public void Home()
     {
