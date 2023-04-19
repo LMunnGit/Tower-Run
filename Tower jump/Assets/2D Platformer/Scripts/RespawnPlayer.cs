@@ -14,4 +14,10 @@ void Respawn()
     // spawn full floor at the closet platform to the players feet
     // play animation for player revive and for floor spawning
 }
+
+void Update()
+{
+// raycast
+}
+   
 }
