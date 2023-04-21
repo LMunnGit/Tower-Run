@@ -90,10 +90,21 @@ namespace Platformer
             if (spawner.chunkRight == true)
             {
                 transform.position = playerSpawn[0].position;
+
+                // Face right
+                if (facingRight)
+                {
+                    Flip();
+                }
             } else if (spawner.chunkRight == false)
             {
                 transform.position = playerSpawn[1].position;
-                Flip();
+                
+                // Face left
+                if (!facingRight)
+                {
+                    Flip();
+                }
             }
         }
 
