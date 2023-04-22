@@ -15,6 +15,6 @@ void Awake()
 
 void Update()
 {
-        transform.position = set.position;
+    //    transform.position = set.position;
 }
 }
