@@ -6,6 +6,7 @@ public class PlatformSpawner : MonoBehaviour
 {
 [SerializeField] private Transform player;
 [SerializeField] private Transform cam;
+[SerializeField] private Transform camTop;
 [SerializeField] public Transform spawner;
 [SerializeField] public Transform chunks;
 [SerializeField] private GameObject[] platformLeft;
@@ -19,6 +20,7 @@ public bool chunkRight;
 
 public float x;
 public int num;
+private bool isSet = false;
 
 public void Setup()
 {
@@ -38,8 +40,9 @@ public void Setup()
     towerHeight = chunkSize;
     chunkHeight = 1;
     spawner.position = new Vector2(0, chunkSize);
-    
 }
+
+// When spawner passes the top set a new top
 void Update()
 {   
 
@@ -48,6 +51,15 @@ void Update()
         SpawnPlatform();
         towerHeight += chunkSize;
     }
+}
+
+// Stay above the camera
+void LateUpdate()
+{
+    if (PlatformSpawnPosition.isSet)
+    {
+        transform.position = new Vector2(camTop.position.x, camTop.position.y + 5f);
+    }  
 }
 
 // Platform spawning script
