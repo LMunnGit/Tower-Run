@@ -26,7 +26,7 @@ THE SOFTWARE. */
 using UnityEngine;
 using System.Collections;
 
-[ExecuteInEditMode]
+// [ExecuteInEditMode]
 public class CameraAnchor : MonoBehaviour {
 	public enum AnchorType {
 		BottomLeft,
@@ -48,6 +48,7 @@ public class CameraAnchor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		sizer = GetComponent<ScreenResolutionSizer>();
 		updateAnchorRoutine = UpdateAnchorAsync();
 		UpdateAnchor();
 	}

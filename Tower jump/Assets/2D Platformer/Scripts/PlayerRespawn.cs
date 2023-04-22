@@ -15,7 +15,12 @@ void Respawn()
     // play animation for player revive and for floor spawning
 }
 
-void FixedUpdate()
+void OnDrawGizmos()
+{
+    Gizmos.DrawWireSphere(transform.position, 8.5f);
+}
+
+void Update()
 {
     if (Input.GetKeyDown(KeyCode.F)) // when f is pressed check platforms around player
     {
@@ -26,20 +31,22 @@ foreach(Collider2D coll in colliders)
 {
         if (highestPlatform != null)
         {
+            // make sure platform in under player
             if (coll.gameObject.transform.position.y < player.transform.position.y && coll.gameObject.tag == "Platform")
             {
-
-        if (coll.gameObject.transform.position.y > highestPlatform.transform.position.y)
+        if (coll.gameObject.transform.position.y >= highestPlatform.transform.position.y)
         {
             highestPlatform = coll.gameObject.transform; // set highest platform
         }
         
-        } else {
-            highestPlatform = null;
         }
         
         } else {
+            // make sure platform in under player
+            if (coll.gameObject.transform.position.y < player.transform.position.y && coll.gameObject.tag == "Platform")
+            {
             highestPlatform = coll.gameObject.transform; // set first platform
+            }
         }
     } 
     if (highestPlatform != null)

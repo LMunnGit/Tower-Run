@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8175817786529214200}
   - component: {fileID: 3518353927937438406}
   - component: {fileID: 2239553071657330613}
+  - component: {fileID: 6278872679249536051}
+  - component: {fileID: 6303263571106956971}
   m_Layer: 0
   m_Name: Grass Platform
   m_TagString: Platform
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8826240662351130757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.77, y: -0.95, z: 0}
+  m_LocalPosition: {x: -2.8125, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -111,3 +113,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6278872679249536051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8826240662351130757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0822356a2100df7438772fa6e83df62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectToScale: {fileID: 8826240662351130757}
+  naturalObjectSize: 1
+  screenResolutionWidth: 1080
+--- !u!114 &6303263571106956971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8826240662351130757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b836fa3924ba5443b2586fd496ed032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 8826240662351130757}
+  sizer: {fileID: 6278872679249536051}
+  anchorType: 0
+  anchorOffset: {x: 0, y: 0, z: 0}

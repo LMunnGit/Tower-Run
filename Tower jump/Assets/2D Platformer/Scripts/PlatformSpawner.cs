@@ -6,7 +6,7 @@ public class PlatformSpawner : MonoBehaviour
 {
 [SerializeField] private Transform player;
 [SerializeField] private Transform cam;
-[SerializeField] private Transform spawner;
+[SerializeField] public Transform spawner;
 [SerializeField] public Transform chunks;
 [SerializeField] private GameObject[] platformLeft;
 [SerializeField] private GameObject[] platformRight;
@@ -19,11 +19,6 @@ public bool chunkRight;
 
 public float x;
 public int num;
-
-void Start()
-{
- 
-}
 
 public void Setup()
 {

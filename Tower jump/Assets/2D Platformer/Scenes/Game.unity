@@ -1231,12 +1231,9 @@ MonoBehaviour:
   spawner: {fileID: 404403633}
   chunks: {fileID: 228948662}
   platformLeft:
-  - {fileID: 296417430643432503, guid: 01b4f6e6d3e7b3b40acdbbf60056ec3f, type: 3}
-  - {fileID: 3297973210404587181, guid: a4235b873c67d134bb54f32725f7f17d, type: 3}
+  - {fileID: 5596859187289280788, guid: 83571c053c39fcb4e92c1d9fc8f434e7, type: 3}
   platformRight:
-  - {fileID: 3383386783561298435, guid: ba14dde1787f49a40a7b72d90119d98e, type: 3}
-  - {fileID: 2268625557494864800, guid: 01501a6af387ac145afe4ea08ee16627, type: 3}
-  - {fileID: 5223959306446382167, guid: bb80d00c6e231e340833f120b7de49ed, type: 3}
+  - {fileID: 5596859187289280788, guid: 83571c053c39fcb4e92c1d9fc8f434e7, type: 3}
   towerHeight: 0
   chunkSize: 8.5
   chunkHeight: 0
@@ -1467,6 +1464,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1579,6 +1577,22 @@ MonoBehaviour:
   score: {fileID: 183032757}
   playerController: {fileID: 788690556}
   platformSpawner: {fileID: 404403634}
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f17f6269eef0d45a191cb1bd61cf5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wireColor: {r: 1, g: 1, b: 1, a: 1}
+  UnitsSize: 10
+  constraint: 1
+  camera: {fileID: 519420031}
 --- !u!1 &634571048
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,7 +2144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788690555}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.79, y: 4.7, z: 0}
+  m_LocalPosition: {x: 1.22, y: 1.43, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3860,7 +3874,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 0.4
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
