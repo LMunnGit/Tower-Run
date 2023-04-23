@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlatformSpawnPosition : MonoBehaviour
 {
 public PlatformSpawner platformSpawner;
+private Transform ground;
 private Transform set;
 public static bool isSet;
 
@@ -12,14 +13,15 @@ void Awake()
 {
     platformSpawner = GameObject.Find("Platform Spawner").GetComponent<PlatformSpawner>();
     set = platformSpawner.spawner;
+    ground = GameObject.Find("Ground").transform;
     isSet = false;
-    Invoke("SetPosition", 0.1f);
+    Invoke("SetPosition", 0.05f);
 }
 
-void SetPosition()
+public void SetPosition()
 {
-    transform.position = set.position;
-    isSet = true;
+        transform.position = set.position;
+        isSet = true;  
 }
 
 

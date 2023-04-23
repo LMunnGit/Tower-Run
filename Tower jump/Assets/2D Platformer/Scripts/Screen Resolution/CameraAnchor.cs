@@ -47,7 +47,7 @@ public class CameraAnchor : MonoBehaviour {
 	IEnumerator updateAnchorRoutine; //Coroutine handle so we don't start it if it's already running
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		sizer = GetComponent<ScreenResolutionSizer>();
 		updateAnchorRoutine = UpdateAnchorAsync();
 		UpdateAnchor();

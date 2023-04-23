@@ -7,6 +7,7 @@ public class PlatformSpawner : MonoBehaviour
 [SerializeField] private Transform player;
 [SerializeField] private Transform cam;
 [SerializeField] private Transform camTop;
+[SerializeField] private Transform ground;
 [SerializeField] public Transform spawner;
 [SerializeField] public Transform chunks;
 [SerializeField] private GameObject[] platformLeft;
@@ -34,12 +35,23 @@ public void Setup()
     }
     
     // Setup
+    chunkHeight = 0;
     spawner.position = new Vector3(0, 0, 0);
-    SpawnPlatform();
-    
+
+    // Spawn first platform
+    PlatformSetup();
+
+    chunkRight = !chunkRight;
+    chunkHeight++;
+
+    spawner.position = new Vector3(0, chunkSize, 0);
     towerHeight = chunkSize;
-    chunkHeight = 1;
-    spawner.position = new Vector2(0, chunkSize);
+
+    // Spawn second platform 
+    PlatformSetup();
+
+    towerHeight = chunkSize * 2;
+
 }
 
 // When spawner passes the top set a new top
@@ -62,20 +74,46 @@ void LateUpdate()
     }  
 }
 
+void PlatformSetup()
+{
+    if (chunkRight == true)
+    {
+        num = Random.Range(0, platformRight.Length);
+        var platRight = Instantiate(platformRight[num], new Vector3(x, 0, 0), Quaternion.identity, null);
+
+        platRight.transform.position = spawner.position;
+        platRight.transform.parent = chunks.transform;
+    } else if (chunkRight == false)
+    {
+        num = Random.Range(0, platformLeft.Length);
+        var platLeft = Instantiate(platformLeft[num], new Vector3(x, 0, 0), Quaternion.identity, null);
+
+        platLeft.transform.position = spawner.position;
+        platLeft.transform.parent = chunks.transform;
+    }
+}
+
 // Platform spawning script
 void SpawnPlatform()
 {
     if (chunkRight == true)
     {
         num = Random.Range(0, platformRight.Length);
-        var platRight = Instantiate(platformRight[num], new Vector3(x, spawner.position.y, 0), Quaternion.identity, null);
+        var platRight = Instantiate(platformRight[num], new Vector3(x, 0, 0), Quaternion.identity, null);
+
+        float minus = chunkHeight * chunkSize;
+        platRight.transform.position = spawner.position + Vector3.down * minus;
         platRight.transform.parent = chunks.transform;
     } else if (chunkRight == false)
     {
         num = Random.Range(0, platformLeft.Length);
-        var platLeft = Instantiate(platformLeft[num], new Vector3(x, spawner.position.y, 0), Quaternion.identity, null);
+        var platLeft = Instantiate(platformLeft[num], new Vector3(x, 0, 0), Quaternion.identity, null);
+
+        float minus = chunkHeight * chunkSize;
+        platLeft.transform.position = spawner.position + Vector3.down * minus;
         platLeft.transform.parent = chunks.transform;
     }
+
     chunkRight = !chunkRight;
     chunkHeight++;
 }
