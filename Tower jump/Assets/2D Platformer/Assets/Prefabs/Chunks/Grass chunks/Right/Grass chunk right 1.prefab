@@ -45,6 +45,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3676283969436134963}
     m_Modifications:
+    - target: {fileID: 1073456037848185026, guid: 64ee8096e85ec5342a63e449803d5db1, type: 3}
+      propertyPath: anchorType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073456037848185026, guid: 64ee8096e85ec5342a63e449803d5db1, type: 3}
+      propertyPath: anchorOffset.x
+      value: 1.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073456037848185026, guid: 64ee8096e85ec5342a63e449803d5db1, type: 3}
+      propertyPath: anchorOffset.y
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1764107278001777280, guid: 64ee8096e85ec5342a63e449803d5db1, type: 3}
       propertyPath: m_Name
       value: Small Grass Platform
@@ -155,6 +167,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5550264351123521907, guid: b64545fff281d9145b8bb5f430dbe34e, type: 3}
+      propertyPath: anchorType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550264351123521907, guid: b64545fff281d9145b8bb5f430dbe34e, type: 3}
+      propertyPath: anchorOffset.x
+      value: -1.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550264351123521907, guid: b64545fff281d9145b8bb5f430dbe34e, type: 3}
+      propertyPath: anchorOffset.y
+      value: 3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b64545fff281d9145b8bb5f430dbe34e, type: 3}
 --- !u!4 &1068642969318284499 stripped
@@ -169,6 +193,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3676283969436134963}
     m_Modifications:
+    - target: {fileID: 6303263571106956971, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
+      propertyPath: anchorType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303263571106956971, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
+      propertyPath: anchorOffset.x
+      value: 1.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303263571106956971, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
+      propertyPath: anchorOffset.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8175817786529214200, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -231,6 +267,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3676283969436134963}
     m_Modifications:
+    - target: {fileID: 3995663365383472708, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
+      propertyPath: anchorType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995663365383472708, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
+      propertyPath: anchorOffset.x
+      value: -1.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995663365383472708, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
+      propertyPath: anchorOffset.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5971705293414377841, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
       propertyPath: m_Name
       value: Floor
@@ -293,6 +341,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3676283969436134963}
     m_Modifications:
+    - target: {fileID: 6303263571106956971, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
+      propertyPath: anchorType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303263571106956971, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
+      propertyPath: anchorOffset.x
+      value: -1.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303263571106956971, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
+      propertyPath: anchorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8175817786529214200, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -355,6 +415,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3676283969436134963}
     m_Modifications:
+    - target: {fileID: 6303263571106956971, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
+      propertyPath: anchorType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303263571106956971, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
+      propertyPath: anchorOffset.x
+      value: -1.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303263571106956971, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
+      propertyPath: anchorOffset.y
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 8175817786529214200, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -464,6 +536,18 @@ PrefabInstance:
     - target: {fileID: 482664848965117215, guid: f0ec1f71e658d50408ba1401743d2ade, type: 3}
       propertyPath: m_Name
       value: Small floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189428002660382479, guid: f0ec1f71e658d50408ba1401743d2ade, type: 3}
+      propertyPath: anchorType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189428002660382479, guid: f0ec1f71e658d50408ba1401743d2ade, type: 3}
+      propertyPath: anchorOffset.x
+      value: -1.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189428002660382479, guid: f0ec1f71e658d50408ba1401743d2ade, type: 3}
+      propertyPath: anchorOffset.y
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ec1f71e658d50408ba1401743d2ade, type: 3}

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2370058098865023722}
   - component: {fileID: 2370058098865023723}
+  - component: {fileID: 6650850488953546825}
+  - component: {fileID: 5550264351123521907}
   - component: {fileID: 2370058098865023720}
   m_Layer: 0
   m_Name: spikes
@@ -85,6 +87,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6650850488953546825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2370058098865023721}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0822356a2100df7438772fa6e83df62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectToScale: {fileID: 2370058098865023721}
+  naturalObjectSize: 1
+  screenResolutionWidth: 1080
+--- !u!114 &5550264351123521907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2370058098865023721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b836fa3924ba5443b2586fd496ed032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 2370058098865023721}
+  sizer: {fileID: 0}
+  anchorType: 0
+  anchorOffset: {x: 0, y: 0, z: 0}
 --- !u!61 &2370058098865023720
 BoxCollider2D:
   m_ObjectHideFlags: 0

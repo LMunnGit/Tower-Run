@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 482664848965117184}
   - component: {fileID: 482664848965117185}
+  - component: {fileID: 4189428002660382479}
+  - component: {fileID: -6193000627171958033}
   - component: {fileID: 482664848965117214}
   - component: {fileID: -4342884531511488782}
   m_Layer: 0
@@ -86,6 +88,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4189428002660382479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482664848965117215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b836fa3924ba5443b2586fd496ed032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 482664848965117215}
+  sizer: {fileID: 0}
+  anchorType: 0
+  anchorOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &-6193000627171958033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482664848965117215}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0822356a2100df7438772fa6e83df62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectToScale: {fileID: 482664848965117215}
+  naturalObjectSize: 1
+  screenResolutionWidth: 1080
 --- !u!68 &482664848965117214
 EdgeCollider2D:
   m_ObjectHideFlags: 0
