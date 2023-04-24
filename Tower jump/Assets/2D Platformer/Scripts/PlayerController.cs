@@ -84,24 +84,24 @@ namespace Platformer
             }
         }
 
-        public void Spawn()
+        public void Spawn() // needs fixing
         {
             // Spawn on opposite side of the starting platform
-            if (spawner.chunkRight == true)
+            if (spawner.startingChunkRight == true)
             {
                 transform.position = playerSpawn[0].position;
 
                 // Face right
-                if (facingRight)
+                if (!facingRight)
                 {
                     Flip();
                 }
-            } else if (spawner.chunkRight == false)
+            } else if (spawner.startingChunkRight == false)
             {
                 transform.position = playerSpawn[1].position;
                 
                 // Face left
-                if (!facingRight)
+                if (facingRight)
                 {
                     Flip();
                 }

@@ -94,12 +94,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2370058098865023721}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0822356a2100df7438772fa6e83df62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectToScale: {fileID: 2370058098865023721}
   naturalObjectSize: 1
   screenResolutionWidth: 1080
 --- !u!114 &5550264351123521907

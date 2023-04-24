@@ -39,7 +39,6 @@ public class CameraAnchor : MonoBehaviour {
 		TopCenter,
 		TopRight,
 	};
-	public GameObject gameObject;
 	public ScreenResolutionSizer sizer;
 	public AnchorType anchorType;
 	public Vector3 anchorOffset;

@@ -1240,6 +1240,7 @@ MonoBehaviour:
   chunkSize: 8.5
   chunkHeight: 0
   chunkRight: 0
+  startingChunkRight: 0
   x: 0
   num: 0
 --- !u!1 &441828847
@@ -2063,8 +2064,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   spawner: {fileID: 404403634}
   playerSpawn:
-  - {fileID: 1662596576}
   - {fileID: 689895118}
+  - {fileID: 1662596576}
   gameOver: {fileID: 752385068}
 --- !u!212 &788690557
 SpriteRenderer:
@@ -2228,7 +2229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0822356a2100df7438772fa6e83df62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectToScale: {fileID: 788690555}
   naturalObjectSize: 0.6
   screenResolutionWidth: 1080
 --- !u!1 &865430648

@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class ScreenResolutionSizer : MonoBehaviour
 {
-    public GameObject gameObjectToScale;
     public float naturalObjectSize = 1.0f;
     public float screenResolutionWidth = 1080.0f;
     private float newSize;
-    
-
     private float previousScreenWidth;
 
     void Start()
@@ -27,10 +24,29 @@ public class ScreenResolutionSizer : MonoBehaviour
         }
     }
 
-    void UpdateScale()
+    void UpdateScale() // make player move slower aswell
     {
+        // Resize
         float screenRatio = Screen.width / screenResolutionWidth;
         float newScale = naturalObjectSize / screenRatio;
-        gameObjectToScale.transform.localScale = new Vector3(newScale, newScale, newScale);
+        gameObject.transform.localScale = new Vector3(newScale, newScale, newScale);
+        
+
+        // Reposition
+        float offset;
+        offset = naturalObjectSize / newScale / 4;
+
+        if (gameObject.tag == "Enemy") // Reposition spikes
+        {
+            transform.position += Vector3.down * offset / 3;
+        }
+
+        if (gameObject.transform.position.x < 0) // Left side of screen
+        {
+            transform.position += Vector3.left * offset;
+        } else if (gameObject.transform.position.x > 0) // Right side of screen
+        {
+            transform.position += Vector3.right * offset;
+        }
     }
 }

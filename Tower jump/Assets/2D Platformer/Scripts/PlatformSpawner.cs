@@ -18,12 +18,13 @@ public float towerHeight;
 public float chunkSize;
 public int chunkHeight;
 public bool chunkRight;
+public bool startingChunkRight;
 
 public float x;
 public int num;
 private bool isSet = false;
 
-public void Setup()
+void Awake()
 {
     // Randomize starting chunk
     if (Random.value > 0.5f)
@@ -33,7 +34,13 @@ public void Setup()
     {
         chunkRight = false;
     }
-    
+
+    startingChunkRight = chunkRight;
+}
+
+public void Setup()
+{
+
     // Setup
     chunkHeight = 0;
     spawner.position = new Vector3(0, 0, 0);
@@ -50,6 +57,7 @@ public void Setup()
     // Spawn second platform 
     PlatformSetup();
 
+    chunkRight = !chunkRight;
     towerHeight = chunkSize * 2;
 
 }
