@@ -7,11 +7,33 @@ public class PlayerRespawn : MonoBehaviour
 {
 [SerializeField] private PlayerController playerController;
 [SerializeField] private Transform player;
+[SerializeField] private GameObject respawnPlatform;
+private Transform highestPlatform;
+
+[SerializeField] private float spawnHeight;
+[SerializeField] private float yOffsetThreshold = 1f; // adjust this value to set the Y offset threshold
+
 
 void Respawn()
 {
     playerController.deathState = false;
-    // spawn full floor at the closet platform to the players feet
+    Instantiate(respawnPlatform, new Vector3(0f, highestPlatform.transform.position.y, transform.position.z), Quaternion.identity, null);
+    player.gameObject.transform.position = new Vector3(0f, highestPlatform.transform.position.y + spawnHeight, transform.position.z);
+
+    // Find all GameObjects with the "enemy" tag
+    GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+    // Loop through all enemies
+        foreach (GameObject enemy in enemies)
+        {
+            // Check if the enemy's Y position is less than the player's Y position plus the threshold
+            if (enemy.transform.position.y < player.transform.position.y + yOffsetThreshold)
+            {
+                // Do something if the enemy is within range (e.g. attack the player)
+                Destroy(enemy);
+            }
+        }
+
     // play animation for player revive and for floor spawning
 }
 
@@ -25,7 +47,7 @@ void Update()
     if (Input.GetKeyDown(KeyCode.F)) // when f is pressed check platforms around player
     {
     Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 8.5f);
-    Transform highestPlatform = null;
+    highestPlatform = null;
 
 foreach(Collider2D coll in colliders)
 {
@@ -51,7 +73,9 @@ foreach(Collider2D coll in colliders)
     } 
     if (highestPlatform != null)
     {
-        Debug.Log(highestPlatform.gameObject.name); // show platform name 
+        Debug.Log(highestPlatform.gameObject.name); // show platform name
+        Destroy(highestPlatform.gameObject);
+        Respawn(); // Respawn player 
     } else {
         Debug.Log("null");
     }

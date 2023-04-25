@@ -26,20 +26,22 @@ private bool isSet = false;
 
 void Awake()
 {
-    // Randomize starting chunk
-    if (Random.value > 0.5f)
-    {
-        chunkRight = true;
-    } else 
-    {
-        chunkRight = false;
-    }
 
-    startingChunkRight = chunkRight;
 }
 
 public void Setup()
 {
+        // Randomize starting chunk
+    if (Random.value > 0.5f)
+    {
+        chunkRight = true;
+        startingChunkRight = true;
+    } else 
+    {
+        chunkRight = false;
+        startingChunkRight = false;
+    }
+
 
     // Setup
     chunkHeight = 0;

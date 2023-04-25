@@ -32,10 +32,7 @@ namespace Platformer
         public GameObject gameOver;
 
         void Start()
-        {
-            rb = GetComponent<Rigidbody2D>();
-            animator = GetComponent<Animator>();
-            coll = GetComponent<BoxCollider2D>();
+        { 
         }
 
         void Update()
@@ -86,25 +83,22 @@ namespace Platformer
 
         public void Spawn() // needs fixing
         {
+            // Start
+            rb = GetComponent<Rigidbody2D>();
+            animator = GetComponent<Animator>();
+            coll = GetComponent<BoxCollider2D>();
+
             // Spawn on opposite side of the starting platform
             if (spawner.startingChunkRight == true)
             {
                 transform.position = playerSpawn[0].position;
 
                 // Face right
-                if (!facingRight)
-                {
-                    Flip();
-                }
             } else if (spawner.startingChunkRight == false)
             {
                 transform.position = playerSpawn[1].position;
                 
                 // Face left
-                if (facingRight)
-                {
-                    Flip();
-                }
             }
         }
 

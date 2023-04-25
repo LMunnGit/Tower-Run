@@ -2217,6 +2217,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 788690556}
   player: {fileID: 788690559}
+  respawnPlatform: {fileID: 7840184830086585325, guid: 23c744f93af220d46b0a174e77e4064a, type: 3}
+  spawnHeight: 1
+  yOffsetThreshold: 1
 --- !u!114 &788690563
 MonoBehaviour:
   m_ObjectHideFlags: 0
