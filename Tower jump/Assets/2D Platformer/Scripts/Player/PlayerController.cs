@@ -81,7 +81,7 @@ namespace Platformer
             }
         }
 
-        public void Spawn() // needs fixing
+        public void Spawn()
         {
             // Start
             rb = GetComponent<Rigidbody2D>();

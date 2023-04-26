@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Platformer;
 
 public class ScreenResolutionSizer : MonoBehaviour
 {
@@ -30,7 +31,6 @@ public class ScreenResolutionSizer : MonoBehaviour
         float screenRatio = Screen.width / screenResolutionWidth;
         float newScale = naturalObjectSize / screenRatio;
         gameObject.transform.localScale = new Vector3(newScale, newScale, newScale);
-        
 
         // Reposition
         float offset;
