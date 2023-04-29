@@ -15,6 +15,15 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
+        // destroy old platforms
+        GameObject chunks = GameObject.Find("Chunks");
+        foreach (Transform child in chunks.transform)  
+        { 
+        GameObject.Destroy(child.gameObject);
+        }
+
+        platformSpawner.Setup(); // Spawn platforms
+        playerController.Spawn(); // Spawn player
         // Setup();
     }
 
@@ -38,14 +47,14 @@ public class Manager : MonoBehaviour
         // playerController.deathState = false;
 
         // destroy old platforms
-        // GameObject chunks = GameObject.Find("Chunks");
-        // foreach (Transform child in chunks.transform)  
-        // { 
-        // GameObject.Destroy(child.gameObject);
-        // }
+        GameObject chunks = GameObject.Find("Chunks");
+        foreach (Transform child in chunks.transform)  
+        { 
+        GameObject.Destroy(child.gameObject);
+        }
 
-        // platformSpawner.Setup(); // Spawn platforms
-        // playerController.Spawn(); // Spawn player
+        platformSpawner.Setup(); // Spawn platforms
+        playerController.Spawn(); // Spawn player
     }    
 }
 

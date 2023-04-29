@@ -33,7 +33,12 @@ namespace Platformer
 
         void Start()
         { 
-            Spawn();
+            // Spawn();
+
+            // Start
+            rb = GetComponent<Rigidbody2D>();
+            animator = GetComponent<Animator>();
+            coll = GetComponent<BoxCollider2D>();
         }
 
         void Update()
@@ -84,10 +89,7 @@ namespace Platformer
 
         public void Spawn()
         {
-            // Start
-            rb = GetComponent<Rigidbody2D>();
-            animator = GetComponent<Animator>();
-            coll = GetComponent<BoxCollider2D>();
+
 
             // Spawn on opposite side of the starting platform
             if (spawner.startingChunkRight == true)
