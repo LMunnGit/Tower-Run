@@ -49,7 +49,7 @@ public class CameraAnchor : MonoBehaviour {
 	void Awake () {
 		sizer = GetComponent<ScreenResolutionSizer>();
 		updateAnchorRoutine = UpdateAnchorAsync();
-		UpdateAnchor();
+		StartCoroutine("UpdateAnchorAsync");
 	}
 
 	/// <summary>
@@ -68,7 +68,7 @@ public class CameraAnchor : MonoBehaviour {
 		updateAnchorRoutine = null;
 	}
 
-	void UpdateAnchor() {
+		void UpdateAnchor() {
 		switch(anchorType) {
 		case AnchorType.BottomLeft:
 			SetAnchor(ViewportHandler.Instance.BottomLeft);

@@ -15,28 +15,37 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
-        Setup();
+        // Setup();
+    }
+
+    void Update()
+    {
+
     }
 
     public void Setup()
     {
+
+        SceneManager.LoadScene("Game");
+
         // Setup UI
-        home.SetActive(true);
-        options.SetActive(false);
-        gameOver.SetActive(false);
-        score.SetActive(false);
+        // home.SetActive(true);
+        // options.SetActive(false);
+        // gameOver.SetActive(false);
+        // score.SetActive(false);
 
         // Player Spawn
-        playerController.deathState = false;
+        // playerController.deathState = false;
 
         // destroy old platforms
-        GameObject chunks = GameObject.Find("Chunks");
-        foreach (Transform child in chunks.transform) {
-        GameObject.Destroy(child.gameObject);
-        }
+        // GameObject chunks = GameObject.Find("Chunks");
+        // foreach (Transform child in chunks.transform)  
+        // { 
+        // GameObject.Destroy(child.gameObject);
+        // }
 
-        platformSpawner.Setup(); // Spawn platforms
-        playerController.Spawn(); // Spawn player
+        // platformSpawner.Setup(); // Spawn platforms
+        // playerController.Spawn(); // Spawn player
     }    
 }
 

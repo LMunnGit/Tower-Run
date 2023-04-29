@@ -20,8 +20,8 @@ void Awake()
 
 public void SetPosition()
 {
-        transform.position = set.position;
-        isSet = true;  
+    transform.position = set.position;
+    isSet = true;  
 }
 
 

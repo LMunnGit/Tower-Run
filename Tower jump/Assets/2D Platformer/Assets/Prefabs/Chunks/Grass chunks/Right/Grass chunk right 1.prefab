@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3676283969436134963}
   m_Layer: 0
   m_Name: Grass chunk right 1
-  m_TagString: Untagged
+  m_TagString: Chunk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

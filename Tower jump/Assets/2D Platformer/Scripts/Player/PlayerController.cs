@@ -33,6 +33,7 @@ namespace Platformer
 
         void Start()
         { 
+            Spawn();
         }
 
         void Update()

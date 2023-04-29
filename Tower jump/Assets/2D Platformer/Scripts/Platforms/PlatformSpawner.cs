@@ -23,10 +23,11 @@ public bool startingChunkRight;
 public float x;
 public int num;
 private bool isSet = false;
+public float down;
 
 void Awake()
 {
-
+    Setup();
 }
 
 public void Setup()
@@ -42,8 +43,8 @@ public void Setup()
         startingChunkRight = false;
     }
 
-
     // Setup
+    float minus = chunkHeight;
     chunkHeight = 0;
     spawner.position = new Vector3(0, 0, 0);
 
@@ -54,6 +55,7 @@ public void Setup()
     chunkHeight++;
 
     spawner.position = new Vector3(0, chunkSize, 0);
+    down = towerHeight;
     towerHeight = chunkSize;
 
     // Spawn second platform 
@@ -66,13 +68,14 @@ public void Setup()
 
 // When spawner passes the top set a new top
 void Update()
-{   
+{  
 
     if (spawner.position.y >= towerHeight)
     {
         SpawnPlatform();
         towerHeight += chunkSize;
     }
+
 }
 
 // Stay above the camera
@@ -84,6 +87,7 @@ void LateUpdate()
     }  
 }
 
+// First platforms
 void PlatformSetup()
 {
     if (chunkRight == true)
