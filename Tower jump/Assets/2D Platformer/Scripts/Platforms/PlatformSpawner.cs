@@ -59,7 +59,7 @@ void Update()
 
     if (camTop.position.y + 5f >= towerHeight)
     {
-        spawner.position = new Vector2 (0, towerHeight);
+        spawner.position = new Vector2 (0, 0);
         SpawnPlatform();
     }
 
@@ -80,23 +80,28 @@ void SpawnPlatform()
         var platRight = Instantiate(platformRight[num], new Vector3(x, 0, 0), Quaternion.identity, null);
 
         platRight.transform.parent = chunks.transform;
-        //platRight.transform.position = new Vector2(x, spawner.position.y);
-
-        foreach (Transform child in platRight.transform)  
-        { 
-        child.position += Vector3.up * spawner.position.y;
+        if (chunkHeight > 1)
+        {
+            spawner.position = new Vector2 (0, 13.5f);    
+        } else {
+        spawner.position = new Vector2 (0, towerHeight);
         }
+        platRight.transform.localPosition = new Vector2(x, spawner.position.y);
+
     } else if (chunkRight == false)
     {
         num = Random.Range(0, platformLeft.Length);
         var platLeft = Instantiate(platformLeft[num], new Vector3(x, 0, 0), Quaternion.identity, null);
 
         platLeft.transform.parent = chunks.transform;
-        //platLeft.transform.position = new Vector2(x, spawner.position.y);
-        foreach (Transform child in platLeft.transform)  
-        { 
-        child.position += Vector3.up * spawner.position.y;
+         if (chunkHeight > 1)
+        {
+            spawner.position = new Vector2 (0, 13.5f);    
+        } else {
+        spawner.position = new Vector2 (0, towerHeight);
         }
+        platLeft.transform.localPosition = new Vector2(x, spawner.position.y);
+
     }
 
     chunkRight = !chunkRight;

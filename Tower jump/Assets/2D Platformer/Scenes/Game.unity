@@ -1176,7 +1176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404403632}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: -3.5, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1202,7 +1202,7 @@ MonoBehaviour:
   spawner: {fileID: 404403633}
   chunks: {fileID: 914078590}
   platformLeft:
-  - {fileID: 296417430643432503, guid: 01b4f6e6d3e7b3b40acdbbf60056ec3f, type: 3}
+  - {fileID: 5596859187289280788, guid: 83571c053c39fcb4e92c1d9fc8f434e7, type: 3}
   platformRight:
   - {fileID: 2268625557494864800, guid: 01501a6af387ac145afe4ea08ee16627, type: 3}
   towerHeight: 0
@@ -2032,7 +2032,7 @@ MonoBehaviour:
   groundCheck: {fileID: 1156558023}
   preJumpTime: 0.1
   animator: {fileID: 0}
-  spawner: {fileID: 404403634}
+  spawner: {fileID: 0}
   playerSpawn:
   - {fileID: 689895118}
   - {fileID: 1662596576}
