@@ -193,6 +193,7 @@ namespace Platformer
             animator.SetTrigger("IsJumping");
         }
 
+    // Player die
         private void Death()
         {
             gameOver.SetActive(true);

@@ -14,7 +14,7 @@ private Transform highestPlatform;
 [SerializeField] private float yOffsetThreshold = 1f; // adjust this value to set the Y offset threshold
 
 
-void Respawn()
+void RespawnPlayer()
 {
     playerController.deathState = false;
     Instantiate(respawnPlatform, new Vector3(0f, highestPlatform.transform.position.y, transform.position.z), Quaternion.identity, null);
@@ -39,14 +39,12 @@ void Respawn()
 
 void OnDrawGizmos()
 {
-    Gizmos.DrawWireSphere(transform.position, 8.5f);
+    // Gizmos.DrawWireSphere(transform.position, 8.5f);
 }
 
-void Update()
+public void Respawn()
 {
-    if (Input.GetKeyDown(KeyCode.F)) // when f is pressed check platforms around player
-    {
-    Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 8.5f);
+Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 8.5f);
     highestPlatform = null;
 
 foreach(Collider2D coll in colliders)
@@ -75,10 +73,9 @@ foreach(Collider2D coll in colliders)
     {
         Debug.Log(highestPlatform.gameObject.name); // show platform name
         Destroy(highestPlatform.gameObject);
-        Respawn(); // Respawn player 
+        RespawnPlayer(); // Respawn player 
     } else {
-        Debug.Log("null");
+        Debug.Log("null"); // show null
     }
-}  
 }
 }
