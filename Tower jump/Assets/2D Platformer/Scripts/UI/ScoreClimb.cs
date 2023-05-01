@@ -9,6 +9,7 @@ private ScoreCounter scoreCounter;
 void Start()
 {
     scoreCounter = GameObject.Find("ScoreCounter").GetComponent<ScoreCounter>(); // add script
+    Setup();
 }
 
 public void Setup()

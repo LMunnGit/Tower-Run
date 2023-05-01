@@ -794,7 +794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &183032758
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1202,11 +1202,9 @@ MonoBehaviour:
   spawner: {fileID: 404403633}
   chunks: {fileID: 914078590}
   platformLeft:
-  - {fileID: 5596859187289280788, guid: 83571c053c39fcb4e92c1d9fc8f434e7, type: 3}
-  - {fileID: 296417430643432503, guid: 01b4f6e6d3e7b3b40acdbbf60056ec3f, type: 3}
+  - {fileID: 3297973210404587181, guid: a4235b873c67d134bb54f32725f7f17d, type: 3}
   platformRight:
-  - {fileID: 3383386783561298435, guid: ba14dde1787f49a40a7b72d90119d98e, type: 3}
-  - {fileID: 2268625557494864800, guid: 01501a6af387ac145afe4ea08ee16627, type: 3}
+  - {fileID: 3297973210404587181, guid: a4235b873c67d134bb54f32725f7f17d, type: 3}
   towerHeight: 0
   chunkSize: 8.5
   chunkHeight: 0
@@ -1530,7 +1528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colDepth: 4
   zPosition: 0
-  player: {fileID: 788690559}
+  player: {fileID: 788690555}
   camStart: {fileID: 357086065}
   playerController: {fileID: 788690556}
   camPanSpeed: 1
@@ -1551,6 +1549,7 @@ MonoBehaviour:
   gameOver: {fileID: 752385068}
   score: {fileID: 183032757}
   playerController: {fileID: 788690556}
+  scoreManager: {fileID: 0}
   platformSpawner: {fileID: 404403634}
 --- !u!114 &519420035
 MonoBehaviour:
@@ -1600,37 +1599,6 @@ Transform:
   - {fileID: 1662596576}
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &653701821
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 653701822}
-  m_Layer: 0
-  m_Name: Respawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &653701822
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 653701821}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 562.86304, y: 963.2422, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &656232560
 GameObject:
@@ -1789,7 +1757,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689895117}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 1.5, z: 0}
+  m_LocalPosition: {x: -1, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2173,6 +2141,8 @@ MonoBehaviour:
   - {fileID: 689895118}
   - {fileID: 1662596576}
   gameOver: {fileID: 752385068}
+  respawn: {fileID: 1753087246}
+  respawnChance: 0.5
 --- !u!212 &788690557
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2324,6 +2294,8 @@ MonoBehaviour:
   playerController: {fileID: 788690556}
   player: {fileID: 788690559}
   respawnPlatform: {fileID: 7840184830086585325, guid: 23c744f93af220d46b0a174e77e4064a, type: 3}
+  gameOver: {fileID: 752385068}
+  respawn: {fileID: 1753087246}
   spawnHeight: 1
   yOffsetThreshold: 1
 --- !u!114 &788690563
@@ -2949,7 +2921,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &969840566
 GameObject:
@@ -4236,7 +4208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1753087247
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4288,7 +4260,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1811743306
 GameObject:

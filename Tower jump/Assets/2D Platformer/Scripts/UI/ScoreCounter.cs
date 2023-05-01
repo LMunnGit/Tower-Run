@@ -15,20 +15,27 @@ public class ScoreCounter : MonoBehaviour
         // create score collider
         scoreColl = new GameObject().transform;
 
+        // position score collider
+
+        scoreColl.transform.position = new Vector2 (0f, 3f);
+
         // name score collider
         scoreColl.name = "ScoreCollider";
 
         // add collider
         scoreColl.gameObject.AddComponent<EdgeCollider2D>();
 
-        // Size the collider
+        // size the collider
         scoreColl.GetComponent<EdgeCollider2D>().transform.localScale = new Vector2(Screen.width/100, 0f);
 
         // make collider a trigger
         scoreColl.GetComponent<EdgeCollider2D>().isTrigger = true;
 
+        // add mover
         scoreColl.gameObject.AddComponent<ScoreClimb>();
 
+        // set the score to 0
+        scoreManager.score = 0;
     }
 
     void Update()

@@ -8,33 +8,16 @@ public class PlayerRespawn : MonoBehaviour
 [SerializeField] private PlayerController playerController;
 [SerializeField] private Transform player;
 [SerializeField] private GameObject respawnPlatform;
+[SerializeField] private GameObject gameOver;
+[SerializeField] private GameObject respawn;
 private Transform highestPlatform;
 
 [SerializeField] private float spawnHeight;
 [SerializeField] private float yOffsetThreshold = 1f; // adjust this value to set the Y offset threshold
 
-
-void RespawnPlayer()
+void Awake()
 {
-    playerController.deathState = false;
-    Instantiate(respawnPlatform, new Vector3(0f, highestPlatform.transform.position.y, transform.position.z), Quaternion.identity, null);
-    player.gameObject.transform.position = new Vector3(0f, highestPlatform.transform.position.y + spawnHeight, transform.position.z);
-
-    // Find all GameObjects with the "enemy" tag
-    GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-    // Loop through all enemies
-        foreach (GameObject enemy in enemies)
-        {
-            // Check if the enemy's Y position is less than the player's Y position plus the threshold
-            if (enemy.transform.position.y < player.transform.position.y + yOffsetThreshold)
-            {
-                // Do something if the enemy is within range (e.g. attack the player)
-                Destroy(enemy);
-            }
-        }
-
-    // play animation for player revive and for floor spawning
+    gameOver.SetActive(false);
 }
 
 void OnDrawGizmos()
@@ -78,4 +61,31 @@ foreach(Collider2D coll in colliders)
         Debug.Log("null"); // show null
     }
 }
+
+// After respawn
+void RespawnPlayer()
+{
+    playerController.deathState = false;
+    Instantiate(respawnPlatform, new Vector3(0f, highestPlatform.transform.position.y, transform.position.z), Quaternion.identity, null);
+    player.gameObject.transform.position = new Vector3(0f, highestPlatform.transform.position.y + spawnHeight, transform.position.z);
+
+    // Find all GameObjects with the "enemy" tag
+    GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+    // Loop through all enemies
+        foreach (GameObject enemy in enemies)
+        {
+            // Check if the enemy's Y position is less than the player's Y position plus the threshold
+            if (enemy.transform.position.y < player.transform.position.y + yOffsetThreshold)
+            {
+                // Do something if the enemy is within range (e.g. attack the player)
+                Destroy(enemy);
+            }
+        }
+
+        respawn.SetActive(false);
+
+    // play animation for player revive and for floor spawning
+}
+
 }

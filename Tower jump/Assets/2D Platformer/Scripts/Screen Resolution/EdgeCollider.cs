@@ -13,7 +13,7 @@ public class EdgeCollider : MonoBehaviour
     private Transform leftCollider;
     private Transform rightCollider;
     private Vector3 cameraPos;
-    public Transform player;
+    public GameObject player;
     public Transform camStart;
     public PlayerController playerController;
     public float camPanSpeed;
@@ -59,15 +59,15 @@ public class EdgeCollider : MonoBehaviour
     }
 
     // Camera follow player
-    void Update()
+    void LateUpdate()
     {
-        if (playerController.deathState == false && player.position.y <= camStart.position.y) // Camera in start position
+        if (playerController.deathState == false && player.transform.position.y <= camStart.position.y) // Camera in start position
         {
             transform.position = camStart.position;
         }
-        if (playerController.deathState == false && player.position.y > camStart.position.y) // camera follow player
+    if (playerController.deathState == false && player.transform.position.y > camStart.position.y) // camera follow player
         {
-            transform.position = new Vector3 (transform.position.x, player.position.y, -10f);
+            transform.position = new Vector3 (transform.position.x, player.transform.position.y, transform.position.z);
         } else if (playerController.deathState == true && transform.position.y > camStart.position.y) // camera pan down
         {   
             transform.position -= new Vector3 (0, camPanSpeed * Time.deltaTime, 0);

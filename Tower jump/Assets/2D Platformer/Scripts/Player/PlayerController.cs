@@ -31,6 +31,9 @@ namespace Platformer
         public Transform[] playerSpawn = new Transform[2];
         public GameObject gameOver;
 
+        public GameObject respawn;
+        [SerializeField] float respawnChance;
+
         void Start()
         { 
             // Spawn();
@@ -90,6 +93,9 @@ namespace Platformer
         public void Spawn()
         {
 
+            rb = GetComponent<Rigidbody2D>();
+            animator = GetComponent<Animator>();
+            coll = GetComponent<BoxCollider2D>();
 
             // Spawn on opposite side of the starting platform
             if (spawner.startingChunkRight == true)
@@ -196,7 +202,14 @@ namespace Platformer
     // Player die
         private void Death()
         {
-            gameOver.SetActive(true);
+            if (Random.value > respawnChance) // make chance higher if player is close to highscore
+            {
+                respawn.SetActive(true);
+            } else
+            {
+                gameOver.SetActive(true);
+                respawn.SetActive(false);
+            }
         }
 
     }

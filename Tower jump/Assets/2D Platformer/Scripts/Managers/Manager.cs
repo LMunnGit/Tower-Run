@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour
     public GameObject gameOver;
     public GameObject score;
     public PlayerController playerController;
+    public ScoreCounter scoreManager;
     public PlatformSpawner platformSpawner;
 
     private void Start()
@@ -22,6 +23,7 @@ public class Manager : MonoBehaviour
         GameObject.Destroy(child.gameObject);
         }
 
+        scoreManager.score = 0; // Set score to 0
         platformSpawner.Setup(); // Spawn platforms
         playerController.Spawn(); // Spawn player
         // Setup();
@@ -38,13 +40,13 @@ public class Manager : MonoBehaviour
         SceneManager.LoadScene("Game");
 
         // Setup UI
-        // home.SetActive(true);
-        // options.SetActive(false);
-        // gameOver.SetActive(false);
-        // score.SetActive(false);
+        home.SetActive(true);
+        options.SetActive(false);
+        gameOver.SetActive(false);
+        score.SetActive(false);
 
         // Player Spawn
-        // playerController.deathState = false;
+        playerController.deathState = false;
 
         // destroy old platforms
         GameObject chunks = GameObject.Find("Chunks");

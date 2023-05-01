@@ -180,6 +180,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3869353585832916862}
   - component: {fileID: 3912380647683523956}
+  - component: {fileID: 6758092374506148493}
+  - component: {fileID: 3276367692220449039}
   m_Layer: 0
   m_Name: Crumbling Platform
   m_TagString: Platform
@@ -217,3 +219,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plat: {fileID: 3869353584129155872}
   respawnTime: 2
+--- !u!114 &6758092374506148493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3869353585832916863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b836fa3924ba5443b2586fd496ed032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sizer: {fileID: 3276367692220449039}
+  anchorType: 0
+  anchorOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &3276367692220449039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3869353585832916863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0822356a2100df7438772fa6e83df62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  naturalObjectSize: 1
+  screenResolutionWidth: 1080
