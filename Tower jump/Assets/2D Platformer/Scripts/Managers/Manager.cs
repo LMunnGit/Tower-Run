@@ -11,7 +11,7 @@ public class Manager : MonoBehaviour
     public GameObject gameOver;
     public GameObject score;
     public PlayerController playerController;
-    public ScoreCounter scoreManager;
+    public ScoreManager scoreManager;
     public PlatformSpawner platformSpawner;
 
     private void Start()

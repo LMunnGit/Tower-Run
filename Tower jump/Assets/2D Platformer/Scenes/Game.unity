@@ -1204,7 +1204,7 @@ MonoBehaviour:
   platformLeft:
   - {fileID: 3297973210404587181, guid: a4235b873c67d134bb54f32725f7f17d, type: 3}
   platformRight:
-  - {fileID: 3297973210404587181, guid: a4235b873c67d134bb54f32725f7f17d, type: 3}
+  - {fileID: 5223959306446382167, guid: bb80d00c6e231e340833f120b7de49ed, type: 3}
   towerHeight: 0
   chunkSize: 8.5
   chunkHeight: 0
@@ -1549,7 +1549,7 @@ MonoBehaviour:
   gameOver: {fileID: 752385068}
   score: {fileID: 183032757}
   playerController: {fileID: 788690556}
-  scoreManager: {fileID: 0}
+  scoreManager: {fileID: 865430650}
   platformSpawner: {fileID: 404403634}
 --- !u!114 &519420035
 MonoBehaviour:
