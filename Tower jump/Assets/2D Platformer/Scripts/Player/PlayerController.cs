@@ -126,9 +126,12 @@ namespace Platformer
                 Jump();
             } 
 
+            if (deathState == false) // if is Alive, Die
+            {
             deathState = true;
             animator.SetBool("IsDead", true); // if isDead
-            Invoke("Death", 0.35f);            
+            Invoke("Death", 0.35f);   
+            }         
             }
         }
 
@@ -201,7 +204,8 @@ namespace Platformer
     // Player die
         private void Death()
         {
-            if (Random.value > respawnChance) // make chance higher if player is close to highscore
+            float rand = Random.value;
+            if (rand > respawnChance) // make chance higher if player is close to highscore
             {
                 respawn.SetActive(true);
             } else

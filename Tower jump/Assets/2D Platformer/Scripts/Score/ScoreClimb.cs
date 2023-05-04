@@ -5,10 +5,12 @@ using UnityEngine;
 public class ScoreClimb : MonoBehaviour
 {
 private ScoreCounter scoreCounter;
+public ScoreManager scoreManager;
 
 void Start()
 {
     scoreCounter = GameObject.Find("ScoreCounter").GetComponent<ScoreCounter>(); // add script
+    scoreManager = GameObject.Find("Main Camera").GetComponent<ScoreManager>(); // add script
     Setup();
 }
 
@@ -22,7 +24,7 @@ public void OnTriggerEnter2D(Collider2D other)
 {
     if (other.tag == "Player")
     {
-        scoreCounter.score++; // add 1 to the score
+        scoreManager.score += 1f; // add 1 to the score
         transform.position = new Vector2(transform.position.x, transform.position.y + scoreCounter.scoreSize);
     }
 }

@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 183032758}
   - component: {fileID: 183032761}
   - component: {fileID: 183032760}
-  - component: {fileID: 183032759}
+  - component: {fileID: 183032762}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -815,19 +815,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -58}
   m_SizeDelta: {x: -320, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &183032759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183032757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4fe8e624a8d9134bbf7cc1c358886dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 183032760}
 --- !u!114 &183032760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,6 +912,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183032757}
   m_CullTransparentMesh: 1
+--- !u!114 &183032762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183032757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fe8e624a8d9134bbf7cc1c358886dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  scoreManager: {fileID: 0}
 --- !u!1 &222446595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,7 +1105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreSize: 3
   score: 0
-  scoreManager: {fileID: 865430650}
+  scoreManager: {fileID: 519420036}
 --- !u!4 &337951845
 Transform:
   m_ObjectHideFlags: 0
@@ -1446,6 +1447,7 @@ GameObject:
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
   - component: {fileID: 519420035}
+  - component: {fileID: 519420036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1557,8 +1559,10 @@ MonoBehaviour:
   gameOver: {fileID: 752385068}
   score: {fileID: 183032757}
   playerController: {fileID: 788690556}
-  scoreManager: {fileID: 865430650}
+  scoreManager: {fileID: 519420036}
   platformSpawner: {fileID: 404403634}
+  Score: {fileID: 10394062}
+  HighScore: {fileID: 517276988}
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,6 +1579,20 @@ MonoBehaviour:
   UnitsSize: 10
   constraint: 1
   camera: {fileID: 519420031}
+--- !u!114 &519420036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ec73bc4d28fb04f9433668ad5bf37a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  highScore: 0
 --- !u!1 &634571048
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,9 +2347,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 865430649}
-  - component: {fileID: 865430650}
   m_Layer: 0
-  m_Name: Home Score
+  m_Name: HomeScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2354,23 +2371,6 @@ Transform:
   m_Father: {fileID: 1301774934}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &865430650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865430648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21ec73bc4d28fb04f9433668ad5bf37a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  homeScore: {fileID: 865430648}
-  Score: {fileID: 10394062}
-  HighScore: {fileID: 517276988}
-  score: 0
-  highScore: 0
 --- !u!1 &905187008
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,6 +3794,7 @@ MonoBehaviour:
   options: {fileID: 1811743306}
   score: {fileID: 183032757}
   scoreCounter: {fileID: 337951844}
+  scoreManager: {fileID: 519420036}
 --- !u!1 &1411378311
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,13 +33,9 @@ public class ScoreCounter : MonoBehaviour
 
         // add mover
         scoreColl.gameObject.AddComponent<ScoreClimb>();
-
-        // set the score to 0
-        scoreManager.score = 0;
     }
 
     void Update()
-    {
-      scoreManager.score = score;       
+    {    
     }
 }

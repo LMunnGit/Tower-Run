@@ -9,6 +9,7 @@ public class HomeManager : MonoBehaviour
     public GameObject options;
     public GameObject score;
     public ScoreCounter scoreCounter;
+    public ScoreManager scoreManager;
     private PlayerController playerController;
     private ScoreClimb scoreClimb;
 
@@ -27,7 +28,6 @@ public class HomeManager : MonoBehaviour
             playerController.deathState = false;
             home.SetActive(false); 
             score.SetActive(true);
-            scoreCounter.score = 0;
             scoreClimb.Setup();
         }
     } 

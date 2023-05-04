@@ -5,9 +5,6 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-public GameObject homeScore;
-public TextMeshProUGUI Score;
-public TextMeshProUGUI HighScore;
 public float score;
 public float highScore = 0;
 
@@ -22,9 +19,5 @@ void Update()
         {
             highScore = score;
         }
-
-    // Set texts
-    Score.text = score.ToString();
-    HighScore.text = highScore.ToString();
 }
 }
