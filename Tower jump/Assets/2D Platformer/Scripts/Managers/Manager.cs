@@ -16,6 +16,15 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
+         // Setup UI
+        home.SetActive(true);
+        options.SetActive(false);
+        gameOver.SetActive(false);
+        score.SetActive(false);
+
+        // Player Spawn
+        playerController.deathState = false;
+
         // destroy old platforms
         GameObject chunks = GameObject.Find("Chunks");
         foreach (Transform child in chunks.transform)  
@@ -23,10 +32,17 @@ public class Manager : MonoBehaviour
         GameObject.Destroy(child.gameObject);
         }
 
-        scoreManager.score = 0; // Set score to 0
+        LoadData();
         platformSpawner.Setup(); // Spawn platforms
         playerController.Spawn(); // Spawn player
         // Setup();
+    }
+
+    public void LoadData()
+    {
+        SaveData data = SaveSystem.LoadData();
+
+        scoreManager.highScore = SaveData.highScore;
     }
 
     void Update()
@@ -55,6 +71,7 @@ public class Manager : MonoBehaviour
         GameObject.Destroy(child.gameObject);
         }
 
+        LoadData();
         platformSpawner.Setup(); // Spawn platforms
         playerController.Spawn(); // Spawn player
     }    

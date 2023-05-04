@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4501114369739707308}
   - component: {fileID: 1274767516273952479}
   - component: {fileID: 1055144040185217483}
+  - component: {fileID: 8282877563328797168}
+  - component: {fileID: -384043992349769373}
   m_Layer: 0
   m_Name: Moving Grass Platform
   m_TagString: Platform
@@ -126,3 +128,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   raySize: 1.175
+--- !u!114 &8282877563328797168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419907162070733295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b836fa3924ba5443b2586fd496ed032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sizer: {fileID: 0}
+  anchorType: 0
+  anchorOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &-384043992349769373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419907162070733295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0822356a2100df7438772fa6e83df62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  naturalObjectSize: 1
+  screenResolutionWidth: 1080

@@ -12,7 +12,7 @@ public class HomeManager : MonoBehaviour
     private PlayerController playerController;
     private ScoreClimb scoreClimb;
 
-    void Start()
+    void Awake()
     {
         Time.timeScale = 0; 
         scoreClimb = GameObject.Find("ScoreCollider").GetComponent<ScoreClimb>();

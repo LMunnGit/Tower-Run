@@ -43,6 +43,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3748685164432916102}
     m_Modifications:
+    - target: {fileID: 3995663365383472708, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
+      propertyPath: anchorType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995663365383472708, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
+      propertyPath: anchorOffset.x
+      value: -1.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995663365383472708, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
+      propertyPath: anchorOffset.y
+      value: 1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 5971705293414377841, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
       propertyPath: m_Name
       value: Floor (2)
@@ -105,6 +117,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3748685164432916102}
     m_Modifications:
+    - target: {fileID: 6303263571106956971, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
+      propertyPath: anchorType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303263571106956971, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
+      propertyPath: anchorOffset.x
+      value: 1.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303263571106956971, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
+      propertyPath: anchorOffset.y
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 8175817786529214200, guid: fe412dcf6a372a441a53d3b009bb5355, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -167,6 +191,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3748685164432916102}
     m_Modifications:
+    - target: {fileID: 8282877563328797168, guid: 5639c50675365944db8010caace54146, type: 3}
+      propertyPath: anchorType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282877563328797168, guid: 5639c50675365944db8010caace54146, type: 3}
+      propertyPath: anchorOffset.x
+      value: -1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8419907162070733295, guid: 5639c50675365944db8010caace54146, type: 3}
       propertyPath: m_Name
       value: Moving Grass Platform
@@ -229,6 +261,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3748685164432916102}
     m_Modifications:
+    - target: {fileID: 3995663365383472708, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
+      propertyPath: anchorType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995663365383472708, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
+      propertyPath: anchorOffset.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995663365383472708, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
+      propertyPath: anchorOffset.y
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5971705293414377841, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
       propertyPath: m_Name
       value: Floor (1)
@@ -291,6 +335,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3748685164432916102}
     m_Modifications:
+    - target: {fileID: 3995663365383472708, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
+      propertyPath: anchorType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995663365383472708, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
+      propertyPath: anchorOffset.x
+      value: 1.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995663365383472708, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
+      propertyPath: anchorOffset.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5971705293414377841, guid: 8c1b03b9b4801f146961dd8a42dc3b09, type: 3}
       propertyPath: m_Name
       value: Floor

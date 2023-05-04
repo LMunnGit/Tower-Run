@@ -18,4 +18,22 @@ public static class SaveSystem
 
     }
 
+    public static SaveData LoadData()
+    {
+        string path = Application.persistentDataPath + "/score.binary";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+        SaveData data = formatter.Deserialize(stream) as SaveData;
+            stream.Close();
+
+            return data;
+
+        } else {
+            Debug.LogError("Save file not found in" + path);
+            return null;
+        }
+    }
 }

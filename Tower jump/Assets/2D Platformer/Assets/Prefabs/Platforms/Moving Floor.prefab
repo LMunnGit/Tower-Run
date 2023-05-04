@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3171039125858711994}
   - component: {fileID: 9141754307800951363}
   - component: {fileID: -1381989944195229996}
+  - component: {fileID: -7769211122591859446}
+  - component: {fileID: -1717579248444527385}
   m_Layer: 0
   m_Name: Moving Floor
   m_TagString: Platform
@@ -143,3 +145,32 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &-7769211122591859446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3171039125858711999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0822356a2100df7438772fa6e83df62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  naturalObjectSize: 1
+  screenResolutionWidth: 1080
+--- !u!114 &-1717579248444527385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3171039125858711999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b836fa3924ba5443b2586fd496ed032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sizer: {fileID: 0}
+  anchorType: 0
+  anchorOffset: {x: 0, y: 0, z: 0}

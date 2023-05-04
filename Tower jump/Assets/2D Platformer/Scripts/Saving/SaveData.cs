@@ -5,8 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class SaveData
 {
-    public int score;
-    public float highScore;
+    public static float highScore;
 
     public SaveData(ScoreManager scoreManager)
     {

@@ -9,13 +9,15 @@ public GameObject homeScore;
 public TextMeshProUGUI Score;
 public TextMeshProUGUI HighScore;
 public float score;
-public float highScore;
+public float highScore = 0;
 
 void Update()
 {
         if (score > highScore)
         {
             highScore = score;
+            SaveSystem.SaveData(this);
+            Debug.Log(highScore);
         } else if (highScore == 0f)
         {
             highScore = score;

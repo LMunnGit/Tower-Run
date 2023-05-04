@@ -33,7 +33,8 @@ void Awake()
 public void Setup()
 {
         // Randomize starting chunk
-    if (Random.value > 0.5f)
+    float rand = Random.value;
+    if (rand > 0.5f)
     {
         chunkRight = true;
         startingChunkRight = true;
