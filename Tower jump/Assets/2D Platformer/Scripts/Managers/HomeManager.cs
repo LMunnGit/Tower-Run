@@ -28,6 +28,7 @@ public class HomeManager : MonoBehaviour
             playerController.deathState = false;
             home.SetActive(false); 
             score.SetActive(true);
+            scoreManager.score = 0;
             scoreClimb.Setup();
         }
     } 

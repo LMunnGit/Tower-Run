@@ -6,9 +6,11 @@ using UnityEngine;
 public class SaveData
 {
     public static float highScore;
+    public static float score;
 
     public SaveData(ScoreManager scoreManager)
     {
         highScore = scoreManager.highScore;
+        score = scoreManager.score;
     }
 }

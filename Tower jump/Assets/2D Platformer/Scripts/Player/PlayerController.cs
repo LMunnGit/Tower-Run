@@ -32,7 +32,7 @@ namespace Platformer
         public GameObject gameOver;
 
         public GameObject respawn;
-        [SerializeField] float respawnChance;
+        public ScoreManager scoreManager;
 
         void Start()
         { 
@@ -203,9 +203,41 @@ namespace Platformer
 
     // Player die
         private void Death()
-        {
+        {   
+            bool respawnBool = false;
             float rand = Random.value;
-            if (rand > respawnChance) // make chance higher if player is close to highscore
+            // RNG for respawn
+            if (scoreManager.score >= scoreManager.highScore/2)
+            {
+                if (scoreManager.score < scoreManager.highScore/1.25)
+                {
+                if (rand > 0.5f)
+                {
+                    respawnBool = true;
+                }
+                } else if (scoreManager.score > scoreManager.highScore/1.25)
+                {
+                    if (scoreManager.score > scoreManager.highScore)
+                    {
+                    if (rand > 0.1f)
+                    {
+                        respawnBool = true;
+                    }
+                    } else {
+                        respawnBool = true;
+                    }
+                {
+                    respawnBool = true;
+                }
+                }
+            } else 
+            {
+                if (rand > 0.9f)
+                {
+                    respawnBool = true;
+                }
+            }
+            if (respawnBool == true) // make chance higher if player is close to highscore
             {
                 respawn.SetActive(true);
             } else

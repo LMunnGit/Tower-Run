@@ -46,12 +46,7 @@ public class Manager : MonoBehaviour
         SaveData data = SaveSystem.LoadData();
 
         scoreManager.highScore = SaveData.highScore;
-        Debug.Log(scoreManager.highScore);
-    }
-
-    void Update()
-    {
-
+        scoreManager.score = SaveData.score;
     }
 
     public void Setup()
@@ -59,12 +54,11 @@ public class Manager : MonoBehaviour
 
         SceneManager.LoadScene("Game");
 
-        LoadData();
+       
 
         // Setup UI
         home.SetActive(true);
-        Score.text = scoreManager.score.ToString();
-        HighScore.text = scoreManager.highScore.ToString();
+        
         options.SetActive(false);
         gameOver.SetActive(false);
         score.SetActive(false);
@@ -81,6 +75,16 @@ public class Manager : MonoBehaviour
 
         platformSpawner.Setup(); // Spawn platforms
         playerController.Spawn(); // Spawn player
-    }    
+    }  
+
+    void Update()
+    {
+        if (home.activeInHierarchy)
+        {
+            LoadData();
+            Score.text = scoreManager.score.ToString();
+            HighScore.text = scoreManager.highScore.ToString();
+        }
+    }  
 }
 
