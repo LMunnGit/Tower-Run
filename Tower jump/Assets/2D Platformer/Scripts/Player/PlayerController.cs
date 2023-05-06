@@ -32,12 +32,13 @@ namespace Platformer
         public GameObject gameOver;
 
         public GameObject respawn;
+        private bool respawnOnce;
         public ScoreManager scoreManager;
 
         void Start()
         { 
             // Spawn();
-
+            respawnOnce = false;
             // Start
             rb = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
@@ -237,13 +238,16 @@ namespace Platformer
                     respawnBool = true;
                 }
             }
-            if (respawnBool == true) // make chance higher if player is close to highscore
+            if (respawnBool == true && respawnOnce == false) // make chance higher if player is close to highscore
             {
                 respawn.SetActive(true);
+                respawnOnce = true;
             } else
             {
                 gameOver.SetActive(true);
                 respawn.SetActive(false);
+                respawnOnce = false;
+                SaveSystem.SaveData(scoreManager);
             }
         }
 

@@ -197,11 +197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8282877563328797168, guid: 5639c50675365944db8010caace54146, type: 3}
       propertyPath: anchorOffset.x
-      value: -1.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8282877563328797168, guid: 5639c50675365944db8010caace54146, type: 3}
       propertyPath: anchorOffset.y
-      value: -0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8419907162070733295, guid: 5639c50675365944db8010caace54146, type: 3}
       propertyPath: m_Name
@@ -271,11 +271,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1717579248444527385, guid: 17d4e3271304eff44a20d589b0ece872, type: 3}
       propertyPath: anchorOffset.x
-      value: 1.5
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: -1717579248444527385, guid: 17d4e3271304eff44a20d589b0ece872, type: 3}
       propertyPath: anchorOffset.y
-      value: 1.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3171039125858711997, guid: 17d4e3271304eff44a20d589b0ece872, type: 3}
       propertyPath: m_RootOrder
