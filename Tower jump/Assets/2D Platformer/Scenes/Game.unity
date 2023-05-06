@@ -1593,6 +1593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   highScore: 0
+  newHighScore: 0
 --- !u!1 &570167856
 GameObject:
   m_ObjectHideFlags: 0
@@ -4677,6 +4678,7 @@ GameObject:
   - component: {fileID: 2062920644}
   - component: {fileID: 2062920643}
   - component: {fileID: 2062920645}
+  - component: {fileID: 2062920646}
   m_Layer: 5
   m_Name: New Highscore
   m_TagString: Untagged
@@ -4811,7 +4813,7 @@ Animator:
   m_GameObject: {fileID: 2062920641}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2ed92bdcd0c27ad4f824798e73b5c52f, type: 2}
+  m_Controller: {fileID: 9100000, guid: ed7edce79bbca9640a7d603ab7260533, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4822,6 +4824,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2062920646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062920641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbfa5cd65b7e2545b9207cd033d7bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2103881439
 GameObject:
   m_ObjectHideFlags: 0

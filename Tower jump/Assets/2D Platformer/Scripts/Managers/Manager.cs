@@ -47,6 +47,7 @@ public class Manager : MonoBehaviour
 
         scoreManager.highScore = SaveData.highScore;
         scoreManager.score = SaveData.score;
+        // new high score 
     }
 
     public void Setup()
