@@ -34,6 +34,8 @@ namespace Platformer
         public GameObject respawn;
         private bool respawnOnce;
         public ScoreManager scoreManager;
+        [SerializeField] private AudioSource jumpSFX;
+        [SerializeField] private AudioSource deathSFX;
 
         // ads
         [SerializeField] private AdsInitializer adsInitializer;
@@ -128,7 +130,7 @@ namespace Platformer
             {
             if (deathState == false && deathJump == true)
             {
-                Jump();
+                rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
             } 
 
             if (deathState == false) // if is Alive, Die
@@ -202,8 +204,12 @@ namespace Platformer
     // Jump
         public void Jump()
         {
-            rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-            animator.SetTrigger("IsJumping");
+            if (Time.timeScale == 1)
+            {
+                jumpSFX.Play();
+                rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                animator.SetTrigger("IsJumping");
+            }
         }
 
     // Player die
@@ -211,6 +217,7 @@ namespace Platformer
         {   
             bool respawnBool = false;
             float rand = Random.value;
+            deathSFX.Play(); // Play death sound
             // RNG for respawn
             if (scoreManager.score >= scoreManager.highScore/2)
             {

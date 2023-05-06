@@ -46,6 +46,7 @@ public class Manager : MonoBehaviour
         //LoadData();
         platformSpawner.Setup(); // Spawn platforms
         playerController.Spawn(); // Spawn player
+
         // Setup();
     }
 
@@ -84,6 +85,7 @@ public class Manager : MonoBehaviour
 
         platformSpawner.Setup(); // Spawn platforms
         playerController.Spawn(); // Spawn player
+
     }  
 
     void Update()

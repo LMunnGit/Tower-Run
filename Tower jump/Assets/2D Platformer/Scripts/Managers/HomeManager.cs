@@ -10,6 +10,7 @@ public class HomeManager : MonoBehaviour
     public GameObject score;
     public ScoreCounter scoreCounter;
     public ScoreManager scoreManager;
+    public AudioSource UIClick;
     private PlayerController playerController;
     private ScoreClimb scoreClimb;
 
@@ -29,7 +30,7 @@ public class HomeManager : MonoBehaviour
             home.SetActive(false); 
             score.SetActive(true);
             scoreManager.score = 0;
-            scoreClimb.Setup();
+            scoreClimb.Setup();           
         }
     } 
 

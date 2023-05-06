@@ -1,13 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OptionsManager : MonoBehaviour
 {
 
 public GameObject home;
 public GameObject options;
+[SerializeField] AudioSource UIClick;
+[SerializeField] AudioSource music;
+[SerializeField] AudioSource[] SFX;
+[SerializeField] Image musicRend;
+[SerializeField] Image soundRend;
+[SerializeField] Sprite[] soundImg;
+[SerializeField] Sprite[] musicImg;
+private int musicNum;
+private int soundNum;
+private bool isAudioPlaying;
 
+void Start()
+{
+    soundNum = 0;
+    musicNum = 0;
+    isAudioPlaying = true;
+}
 // Open options
 public void OpenOptions()
 {
@@ -23,17 +40,56 @@ public void CloseOptions()
     {
         Time.timeScale = 1; // unpause game
     }
+    UIClick.Play();
 }
 
 // Sound button
 public void ToggleSound()
 {
 Debug.Log("sound toggle");
+if (soundNum == 0)
+{
+    soundNum = 1;
+} else
+{
+    soundNum = 0;
+}
+soundRend.sprite = soundImg[soundNum];
+ToggleAudioSources(); // Mute/Unmute SFX
+UIClick.Play();
 }
 
 // Music button
 public void ToggleMusic()
 {
 Debug.Log("music toggle");
+if (musicNum == 0)
+{
+    musicNum = 1;
+} else
+{
+    musicNum = 0;
 }
+musicRend.sprite = musicImg[musicNum];
+music.mute = !music.mute; // Mute/Unmute Music
+UIClick.Play();
+}
+
+// SFX
+private void ToggleAudioSources()
+    {
+        isAudioPlaying = !isAudioPlaying;
+
+        foreach (AudioSource audioSource in SFX)
+        {
+            if (isAudioPlaying)
+            {
+                audioSource.mute = false;
+            }
+            else
+            {
+                audioSource.mute = true;
+            }
+        }
+    }
 }
