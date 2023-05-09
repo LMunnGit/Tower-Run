@@ -12,8 +12,8 @@ public class ScreenResolutionSizer : MonoBehaviour
 
     void Start()
     {
-        previousScreenWidth = Screen.width;
-        UpdateScale();
+        previousScreenWidth = 0f;
+        // UpdateScale();
     }
 
     void LateUpdate()
@@ -38,7 +38,7 @@ public class ScreenResolutionSizer : MonoBehaviour
 
         if (gameObject.tag == "Enemy") // Reposition spikes
         {
-            transform.position += Vector3.down * offset / 3;
+            transform.position += Vector3.down * offset / 1.5f;
         }
 
         if (gameObject.transform.position.x < 0) // Left side of screen
