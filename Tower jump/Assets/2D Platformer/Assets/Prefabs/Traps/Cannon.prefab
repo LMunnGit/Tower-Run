@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonBall: {fileID: 8624704419736791134, guid: 99ac9919ce6d273479da9e8f179c79cd, type: 3}
   barrel: {fileID: 4289118689866728080}
-  shootTime: 2
+  shootTime: 2.5
 --- !u!114 &8471215074309315679
 MonoBehaviour:
   m_ObjectHideFlags: 0

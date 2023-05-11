@@ -6,7 +6,9 @@ public class CannonBall : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private bool isUp;
+    [SerializeField] private Rigidbody2D rb;
     private float dir;
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -19,22 +21,13 @@ public class CannonBall : MonoBehaviour
         }
         float step = speed * Time.deltaTime;
         Vector3 target = Vector3.up * dir;
-        transform.position = Vector3.MoveTowards(transform.position, target, step);
+        rb.MovePosition(transform.position + new Vector3(0f, speed * dir, 0f) * Time.deltaTime);
+    }
 
-        float raySize = 0.2f;
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, target); // check for collider
-        Debug.DrawRay(transform.position, target * raySize, Color.white);
-
-        if (hitInfo.collider != null)
-    {
-    if (hitInfo.distance < 0.05f && hitInfo.collider.gameObject.tag != "Enemy") // check for collision
+    void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
     }
-    }
 }
 
-    
-
-}
 
