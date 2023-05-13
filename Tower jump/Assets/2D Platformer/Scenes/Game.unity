@@ -1217,7 +1217,6 @@ MonoBehaviour:
   stonePlatformLeft:
   - {fileID: 4019757491242399717, guid: b0778a33ef657da488350c674de6b8c7, type: 3}
   - {fileID: 3597340715859030429, guid: 77187c667396f2a4883e2492dda2c49a, type: 3}
-  - {fileID: 0}
   stonePlatformRight:
   - {fileID: 1713098848123822110, guid: 92f176a91ad94a244997951f024e0b6d, type: 3}
   - {fileID: 2497741533656975407, guid: c1368312e4d30a149837660b1023aaab, type: 3}
@@ -1226,6 +1225,8 @@ MonoBehaviour:
   chunkHeight: 0
   chunkRight: 0
   startingChunkRight: 0
+  stoneChunkStart: 2
+  stoneHeight: 13.5
   x: 0
   num: 0
   down: 0
