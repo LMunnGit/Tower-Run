@@ -92,7 +92,7 @@ void SpawnPlatform()
         {
             spawner.position = new Vector2 (0, stoneHeight);    
         } else {
-        spawner.position = new Vector2 (0, towerHeight);
+        spawner.position = new Vector2 (0, stoneHeight);
         }
         platRight.transform.localPosition = new Vector2(x, spawner.position.y);
 
@@ -106,7 +106,7 @@ void SpawnPlatform()
         {
             spawner.position = new Vector2 (0, stoneHeight);    
         } else {
-        spawner.position = new Vector2 (0, towerHeight);
+        spawner.position = new Vector2 (0, stoneHeight);
         }
         platLeft.transform.localPosition = new Vector2(x, spawner.position.y);
 
@@ -122,7 +122,7 @@ void SpawnPlatform()
         platRight.transform.parent = chunks.transform;
         if (chunkHeight > 1)
         {
-            spawner.position = new Vector2 (0, 13.5f);    
+            spawner.position = new Vector2 (0, 5.5f);    
         } else {
         spawner.position = new Vector2 (0, towerHeight);
         }
