@@ -9,7 +9,7 @@ public float score;
 public float highScore = 0;
 public bool newHighScore = false;
 
-void Update()
+public void Score()
 {
         if (score > highScore)
         {
@@ -17,8 +17,14 @@ void Update()
             newHighScore = true;
             SaveSystem.SaveData(this);
             Debug.Log(highScore);
+        } else if (score < highScore)
+        {
+            newHighScore = false;
+            SaveSystem.SaveData(this);
         } else if (highScore == 0f)
         {
+            newHighScore = true;
+            SaveSystem.SaveData(this);
             highScore = score;
         }
 }
