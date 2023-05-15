@@ -76,7 +76,13 @@ void RespawnPlayer()
 {
     playerController.deathState = false;
     Instantiate(respawnPlatform, new Vector3(0f, highestPlatform.transform.position.y, transform.position.z), Quaternion.identity, null);
-    player.gameObject.transform.position = new Vector3(0f, highestPlatform.transform.position.y + spawnHeight, transform.position.z);
+    int debug = 0;
+    float step = 1 * Time.deltaTime;
+    while (transform.position.y < Mathf.Round(highestPlatform.transform.position.y + spawnHeight) && debug < 100)
+    {
+    player.gameObject.transform.position = Vector3.MoveTowards(transform.position, Vector3.up * spawnHeight + highestPlatform.transform.position, step);
+    debug++;
+    }
 
     // Find all GameObjects with the "enemy" tag
     GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
