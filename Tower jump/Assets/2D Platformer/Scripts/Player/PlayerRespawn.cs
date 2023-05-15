@@ -11,6 +11,7 @@ public class PlayerRespawn : MonoBehaviour
 [SerializeField] private GameObject gameOver;
 [SerializeField] private GameObject respawn;
 private Transform highestPlatform;
+private Vector3 highestPosition;
 
 [SerializeField] private float spawnHeight;
 [SerializeField] private float yOffsetThreshold = 1f; // adjust this value to set the Y offset threshold
@@ -18,6 +19,7 @@ private Transform highestPlatform;
 void Awake()
 {
     gameOver.SetActive(false);
+    highestPosition = Vector3.zero;
 }
 
 void OnDrawGizmos()
@@ -25,9 +27,16 @@ void OnDrawGizmos()
     // Gizmos.DrawWireSphere(transform.position, 8.5f);
 }
 
+void Update()
+{
+    if (player.position.y > highestPosition.y)
+    {
+        highestPosition = player.position;
+    }
+}
 public void Respawn()
 {
-Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 8.5f);
+Collider2D[] colliders = Physics2D.OverlapCircleAll(highestPosition, 8.5f);
     highestPlatform = null;
 
 foreach(Collider2D coll in colliders)
@@ -35,9 +44,9 @@ foreach(Collider2D coll in colliders)
         if (highestPlatform != null)
         {
             // make sure platform in under player
-            if (coll.gameObject.transform.position.y < player.transform.position.y && coll.gameObject.tag == "Platform")
+            if (coll.gameObject.transform.position.y < highestPosition.y && coll.gameObject.tag == "Platform")
             {
-        if (coll.gameObject.transform.position.y >= highestPlatform.transform.position.y)
+        if (coll.gameObject.transform.position.y >= highestPlatform.position.y)
         {
             highestPlatform = coll.gameObject.transform; // set highest platform
         }
@@ -46,7 +55,7 @@ foreach(Collider2D coll in colliders)
         
         } else {
             // make sure platform in under player
-            if (coll.gameObject.transform.position.y < player.transform.position.y && coll.gameObject.tag == "Platform")
+            if (coll.gameObject.transform.position.y < highestPosition.y && coll.gameObject.tag == "Platform")
             {
             highestPlatform = coll.gameObject.transform; // set first platform
             }
