@@ -75,7 +75,6 @@ foreach(Collider2D coll in colliders)
 void RespawnPlayer()
 {
     playerController.deathState = false;
-    Instantiate(respawnPlatform, new Vector3(0f, highestPlatform.transform.position.y, transform.position.z), Quaternion.identity, null);
     int debug = 0;
     float step = 1 * Time.deltaTime;
     while (transform.position.y < Mathf.Round(highestPlatform.transform.position.y + spawnHeight) && debug < 100)
@@ -83,6 +82,9 @@ void RespawnPlayer()
     player.gameObject.transform.position = Vector3.MoveTowards(transform.position, Vector3.up * spawnHeight + highestPlatform.transform.position, step);
     debug++;
     }
+
+    // Spawn Platforms
+    Instantiate(respawnPlatform, new Vector3(0f, highestPlatform.transform.position.y, transform.position.z), Quaternion.identity, null);
 
     // Find all GameObjects with the "enemy" tag
     GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");

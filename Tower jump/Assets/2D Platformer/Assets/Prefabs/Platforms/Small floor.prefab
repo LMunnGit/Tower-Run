@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 07dc9133e02350240962b6bb556d7c15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b836fa3924ba5443b2586fd496ed032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 482664848965117215}
   sizer: {fileID: 0}
   anchorType: 0
   anchorOffset: {x: 0, y: 0, z: 0}
@@ -116,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0822356a2100df7438772fa6e83df62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectToScale: {fileID: 482664848965117215}
   naturalObjectSize: 1
   screenResolutionWidth: 1080
 --- !u!68 &482664848965117214
