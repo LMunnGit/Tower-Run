@@ -77,7 +77,9 @@ void RespawnPlayer()
     playerController.deathState = false;
     int debug = 0;
     float step = 1 * Time.deltaTime;
-    while (transform.position.y < Mathf.Round(highestPlatform.transform.position.y + spawnHeight) && debug < 100)
+
+    // Reposition player
+    while (transform.position.y < Mathf.Round(highestPlatform.transform.position.y + spawnHeight) && debug < 10000)
     {
     player.gameObject.transform.position = Vector3.MoveTowards(transform.position, Vector3.up * spawnHeight + highestPlatform.transform.position, step);
     debug++;

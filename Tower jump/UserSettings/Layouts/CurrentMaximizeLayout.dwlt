@@ -188,8 +188,8 @@ MonoBehaviour:
     y: 0
     width: 289.6
     height: 457.6
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -227,9 +227,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3a5e0000
-      m_LastClickedID: 24122
-      m_ExpandedIDs: 2cc5ffff48ccffff00dbffff28fbffff505e00000c8d000072910000
+      m_SelectedIDs: 525e0000
+      m_LastClickedID: 24146
+      m_ExpandedIDs: 9492fffff2faffff22fbffff28fbffff525e0000c05e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -399,7 +399,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -560,9 +560,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.6168638, y: 4.018146, z: 0.23670202}
+    m_Target: {x: -1.0887997, y: 7.4971857, z: -0.28288072}
     speed: 2
-    m_Value: {x: -1.6168638, y: 4.018146, z: 0.23670202}
+    m_Value: {x: -0.82500005, y: 5, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -613,9 +613,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.03566
+    m_Target: 13.147167
     speed: 2
-    m_Value: 8.03566
+    m_Value: 4.3708696
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -659,8 +659,8 @@ MonoBehaviour:
     y: 0
     width: 458.40002
     height: 457.6
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -735,22 +735,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/2D Platformer/Assets/Prefabs/Chunks/Stone Chunks/Left
+    - Assets/2D Platformer/Assets/Prefabs/Chunks/Grass Chunks/Left
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/2D Platformer/Assets/Prefabs/Chunks/Stone Chunks/Left
+  - Assets/2D Platformer/Assets/Prefabs/Chunks/Grass Chunks/Left
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\itzke\Documents\GitHub\Tower-Run\Tower jump
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 206.29996}
-    m_SelectedIDs: 42660000
-    m_LastClickedID: 26178
-    m_ExpandedIDs: 00000000b4650000b6650000b8650000ba650000bc650000be650000c0650000f865000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 205.49878}
+    m_SelectedIDs: 0e690000
+    m_LastClickedID: 26894
+    m_ExpandedIDs: 00000000da680000dc680000de680000e0680000e2680000e4680000e6680000e868000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -778,7 +778,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b4650000b6650000b8650000ba650000bc650000be650000c0650000
+    m_ExpandedIDs: 00000000da680000dc680000de680000e0680000e2680000e4680000e6680000e868000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -803,9 +803,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 3a5e0000
-    m_LastClickedInstanceID: 24122
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 525e0000
+    m_LastClickedInstanceID: 24146
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000a45f0000ba7b0000c07b0000c67b000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -822,7 +822,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -882,8 +882,8 @@ MonoBehaviour:
     y: 0
     width: 363.19995
     height: 770.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -925,7 +925,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 96.29999
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404403632}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1697f2fba943b94d8ce72d73a3c4367, type: 3}
   m_Name: 
@@ -1236,9 +1236,11 @@ MonoBehaviour:
   stonePlatformLeft:
   - {fileID: 4019757491242399717, guid: b0778a33ef657da488350c674de6b8c7, type: 3}
   - {fileID: 3597340715859030429, guid: 77187c667396f2a4883e2492dda2c49a, type: 3}
+  - {fileID: 1498601225521972911, guid: 41030d840e8872f40bb20c5e526480b5, type: 3}
   stonePlatformRight:
   - {fileID: 1713098848123822110, guid: 92f176a91ad94a244997951f024e0b6d, type: 3}
   - {fileID: 2497741533656975407, guid: c1368312e4d30a149837660b1023aaab, type: 3}
+  - {fileID: 3857317531431207358, guid: 303f73934329b054bb8d46d2d9cc7f66, type: 3}
   towerHeight: 0
   chunkSize: 8.5
   chunkHeight: 0
@@ -1576,7 +1578,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ca8d120d2557274ab739c8472e05cba, type: 3}
   m_Name: 
@@ -5017,60 +5019,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103881439}
   m_CullTransparentMesh: 1
---- !u!1001 &4805419948422548507
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4805419948233693156, guid: a57e140adc94be54a896d544e898d956, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805419948233693156, guid: a57e140adc94be54a896d544e898d956, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805419948233693156, guid: a57e140adc94be54a896d544e898d956, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805419948233693156, guid: a57e140adc94be54a896d544e898d956, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805419948233693156, guid: a57e140adc94be54a896d544e898d956, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805419948233693156, guid: a57e140adc94be54a896d544e898d956, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805419948233693156, guid: a57e140adc94be54a896d544e898d956, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805419948233693156, guid: a57e140adc94be54a896d544e898d956, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805419948233693156, guid: a57e140adc94be54a896d544e898d956, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805419948233693156, guid: a57e140adc94be54a896d544e898d956, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805419948233693156, guid: a57e140adc94be54a896d544e898d956, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805419948233693157, guid: a57e140adc94be54a896d544e898d956, type: 3}
-      propertyPath: m_Name
-      value: Stone chunk right 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a57e140adc94be54a896d544e898d956, type: 3}
