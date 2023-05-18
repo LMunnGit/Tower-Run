@@ -7,9 +7,10 @@ public class PlayerRespawn : MonoBehaviour
 {
 [SerializeField] private PlayerController playerController;
 [SerializeField] private Transform player;
-[SerializeField] private GameObject respawnPlatform;
+[SerializeField] private GameObject[] respawnPlatform;
 [SerializeField] private GameObject gameOver;
 [SerializeField] private GameObject respawn;
+[SerializeField] private  PlatformSpawner spawner;
 private Transform highestPlatform;
 private Vector3 highestPosition;
 
@@ -85,8 +86,16 @@ void RespawnPlayer()
     debug++;
     }
 
+    GameObject platform;
+    if (spawner.chunkHeight >= spawner.stoneChunkStart + 2)
+    {
+        platform = respawnPlatform[1]; // stone
+    } else {
+        platform = respawnPlatform[0]; // grass
+    }
+
     // Spawn Platforms
-    Instantiate(respawnPlatform, new Vector3(0f, highestPlatform.transform.position.y, transform.position.z), Quaternion.identity, null);
+    Instantiate(platform, new Vector3(0f, highestPlatform.transform.position.y, transform.position.z), Quaternion.identity, null);
 
     // Find all GameObjects with the "enemy" tag
     GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
