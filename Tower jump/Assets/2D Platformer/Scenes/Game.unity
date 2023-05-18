@@ -1246,7 +1246,7 @@ MonoBehaviour:
   chunkHeight: 0
   chunkRight: 0
   startingChunkRight: 0
-  stoneChunkStart: 10
+  stoneChunkStart: 2
   stoneHeight: 13.5
   x: 0
   num: 0
