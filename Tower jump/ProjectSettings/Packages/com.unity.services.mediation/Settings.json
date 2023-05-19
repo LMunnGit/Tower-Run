@@ -11,47 +11,47 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "admob-adapter.version",
-                "value": "{\"m_Value\":\"\"}"
+                "value": "{\"m_Value\":\"latest\"}"
             },
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "facebook-adapter.version",
-                "value": "{\"m_Value\":\"\"}"
+                "value": "{\"m_Value\":\"latest\"}"
             },
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "adcolony-adapter.version",
-                "value": "{\"m_Value\":\"\"}"
+                "value": "{\"m_Value\":\"latest\"}"
             },
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "ironsource-adapter.version",
-                "value": "{\"m_Value\":\"\"}"
+                "value": "{\"m_Value\":\"latest\"}"
             },
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "applovin-adapter.version",
-                "value": "{\"m_Value\":\"\"}"
+                "value": "{\"m_Value\":\"latest\"}"
             },
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "vungle-adapter.version",
-                "value": "{\"m_Value\":\"\"}"
+                "value": "{\"m_Value\":\"latest\"}"
             },
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "mintegral-adapter.version",
-                "value": "{\"m_Value\":\"\"}"
+                "value": "{\"m_Value\":\"latest\"}"
             },
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "admob-adapter.app-id.android",
-                "value": "{\"m_Value\":\"\"}"
+                "value": "{\"m_Value\":\"5283662\"}"
             },
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "admob-adapter.app-id.ios",
-                "value": "{\"m_Value\":\"\"}"
+                "value": "{\"m_Value\":\"5283663\"}"
             },
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",

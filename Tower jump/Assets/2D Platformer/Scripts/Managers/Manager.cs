@@ -12,11 +12,17 @@ public class Manager : MonoBehaviour
     public GameObject gameOver;
     public GameObject score;
     public GameObject newHS;
+    public GameObject respawn;
     public PlayerController playerController;
     public ScoreManager scoreManager;
     public PlatformSpawner platformSpawner;
     public TextMeshProUGUI Score;
     public TextMeshProUGUI HighScore;
+
+    // Ads
+    [SerializeField] private AdsInitializer adsInitializer;
+    [SerializeField] RewardedAdsButton rewardedAdsButton;
+
 
     private void Start()
     {
@@ -25,6 +31,7 @@ public class Manager : MonoBehaviour
         options.SetActive(false);
         gameOver.SetActive(false);
         score.SetActive(false);
+        respawn.SetActive(false);
 
         // Player Spawn
         playerController.deathState = false;
@@ -63,6 +70,7 @@ public class Manager : MonoBehaviour
         options.SetActive(false);
         gameOver.SetActive(false);
         score.SetActive(false);
+        respawn.SetActive(false);
 
         // Player Spawn
         playerController.deathState = false;

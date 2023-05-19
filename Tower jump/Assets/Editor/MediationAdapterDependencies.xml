@@ -3,11 +3,20 @@
   <androidPackages>
     <repositories>
       <repository>https://unity3ddist.jfrog.io/artifactory/unity-mediation-mvn-prod-local/</repository>
+      <repository>https://android-sdk.is.com</repository>
+      <repository>https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea</repository>
     </repositories>
     <!-- Mediation Android SDK -->
     <androidPackage spec="com.unity3d.mediation:mediation-sdk:[1.0,2.0[" mediation-identifier="mediation-sdk" mediation-version="1.0" />
     <!-- Mediation SDK Android Adapters -->
+    <androidPackage spec="com.unity3d.mediation:adcolony-adapter:[1.0,2.0[" mediation-identifier="adcolony-adapter" mediation-version="latest" />
+    <androidPackage spec="com.unity3d.mediation:admob-adapter:[1.0,2.0[" mediation-identifier="admob-adapter" mediation-version="latest" />
+    <androidPackage spec="com.unity3d.mediation:applovin-adapter:[1.0,2.0[" mediation-identifier="applovin-adapter" mediation-version="latest" />
+    <androidPackage spec="com.unity3d.mediation:facebook-adapter:[1.0,2.0[" mediation-identifier="facebook-adapter" mediation-version="latest" />
+    <androidPackage spec="com.unity3d.mediation:ironsource-adapter:[1.0,2.0[" mediation-identifier="ironsource-adapter" mediation-version="latest" />
+    <androidPackage spec="com.unity3d.mediation:mintegral-adapter:[1.0,2.0[" mediation-identifier="mintegral-adapter" mediation-version="latest" />
     <androidPackage spec="com.unity3d.mediation:unityads-adapter:[1.0,2.0[" mediation-identifier="unityads-adapter" mediation-version="latest" />
+    <androidPackage spec="com.unity3d.mediation:vungle-adapter:[1.0,2.0[" mediation-identifier="vungle-adapter" mediation-version="latest" />
   </androidPackages>
   <iosPods>
     <!-- Mediation iOS SDK -->
@@ -15,6 +24,13 @@
     <!-- Mediation Dependency Required For resolution -->
     <iosPod name="Protobuf" />
     <!-- Mediation SDK iOS Adapters -->
+    <iosPod name="UnityMediationAdColonyAdapter" version="" source="'https://github.com/Unity-Technologies/unity-mediation-cocoapods-prod.git'" mediation-identifier="adcolony-adapter" mediation-version="latest" />
+    <iosPod name="UnityMediationAdmobAdapter" version="" source="'https://github.com/Unity-Technologies/unity-mediation-cocoapods-prod.git'" mediation-identifier="admob-adapter" mediation-version="latest" />
+    <iosPod name="UnityMediationAppLovinAdapter" version="" source="'https://github.com/Unity-Technologies/unity-mediation-cocoapods-prod.git'" mediation-identifier="applovin-adapter" mediation-version="latest" />
+    <iosPod name="UnityMediationFacebookAdapter" version="" source="'https://github.com/Unity-Technologies/unity-mediation-cocoapods-prod.git'" mediation-identifier="facebook-adapter" mediation-version="latest" />
+    <iosPod name="UnityMediationIronSourceAdapter" version="" source="'https://github.com/Unity-Technologies/unity-mediation-cocoapods-prod.git'" mediation-identifier="ironsource-adapter" mediation-version="latest" />
+    <iosPod name="UnityMediationMintegralAdapter" version="" source="'https://github.com/Unity-Technologies/unity-mediation-cocoapods-prod.git'" mediation-identifier="mintegral-adapter" mediation-version="latest" />
     <iosPod name="UnityMediationUnityAdapter" version="" source="'https://github.com/Unity-Technologies/unity-mediation-cocoapods-prod.git'" mediation-identifier="unityads-adapter" mediation-version="latest" />
+    <iosPod name="UnityMediationVungleAdapter" version="" source="'https://github.com/Unity-Technologies/unity-mediation-cocoapods-prod.git'" mediation-identifier="vungle-adapter" mediation-version="latest" />
   </iosPods>
 </dependencies>

@@ -35,6 +35,7 @@ void Update()
         highestPosition = player.position;
     }
 }
+
 public void Respawn()
 {
 Collider2D[] colliders = Physics2D.OverlapCircleAll(highestPosition, 8.5f);
