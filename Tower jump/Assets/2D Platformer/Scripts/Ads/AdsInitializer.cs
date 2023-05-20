@@ -9,13 +9,17 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
     private string _gameId;
 
     [SerializeField] RewardedAdsButton rewardedAdsButton;
+    [SerializeField] InterstitialAdsButton interstitialAdsButton;
     [SerializeField] GameObject respawn;
+    [SerializeField] GameObject interstitialAds;
  
     void Awake()
     {
         respawn.SetActive(true);
+        interstitialAds.SetActive(true);
         InitializeAds();
         respawn.SetActive(false);
+        interstitialAds.SetActive(false);
     }
  
     public void InitializeAds()
@@ -38,6 +42,7 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
     {
         Debug.Log("Unity Ads initialization complete.");
         rewardedAdsButton.LoadAd();
+        interstitialAdsButton.LoadAd();
     }
  
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)

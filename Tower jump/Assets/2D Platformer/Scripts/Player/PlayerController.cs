@@ -35,6 +35,10 @@ namespace Platformer
         private bool respawnOnce;
         public ScoreManager scoreManager;
 
+        // ads
+        [SerializeField] private AdsInitializer adsInitializer;
+        [SerializeField] AdChance adChance;
+
         void Start()
         { 
             // Spawn();
@@ -240,10 +244,12 @@ namespace Platformer
             }
             if (respawnBool == true && respawnOnce == false) // make chance higher if player is close to highscore
             {
+                adsInitializer.OnInitializationComplete();
                 respawn.SetActive(true);
                 respawnOnce = true;
             } else
             {
+                adChance.AdCheck();
                 gameOver.SetActive(true);
                 respawn.SetActive(false);
                 respawnOnce = false;

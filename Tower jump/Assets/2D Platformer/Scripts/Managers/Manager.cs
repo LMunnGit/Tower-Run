@@ -21,7 +21,7 @@ public class Manager : MonoBehaviour
 
     // Ads
     [SerializeField] private AdsInitializer adsInitializer;
-    [SerializeField] RewardedAdsButton rewardedAdsButton;
+    [SerializeField] private RewardedAdsButton rewardedAdsButton;
 
 
     private void Start()
