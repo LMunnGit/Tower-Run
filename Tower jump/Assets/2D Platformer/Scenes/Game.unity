@@ -1234,13 +1234,9 @@ MonoBehaviour:
   - {fileID: 8397880356787707305, guid: a6d4845e4b5cf4541ad253d81095d6a5, type: 3}
   - {fileID: 4688445396854982262, guid: 08d9c0463ed1cac45a2b7c43c847d5ba, type: 3}
   stonePlatformLeft:
-  - {fileID: 4019757491242399717, guid: b0778a33ef657da488350c674de6b8c7, type: 3}
-  - {fileID: 3597340715859030429, guid: 77187c667396f2a4883e2492dda2c49a, type: 3}
   - {fileID: 1498601225521972911, guid: 41030d840e8872f40bb20c5e526480b5, type: 3}
   stonePlatformRight:
-  - {fileID: 1713098848123822110, guid: 92f176a91ad94a244997951f024e0b6d, type: 3}
   - {fileID: 2497741533656975407, guid: c1368312e4d30a149837660b1023aaab, type: 3}
-  - {fileID: 3857317531431207358, guid: 303f73934329b054bb8d46d2d9cc7f66, type: 3}
   towerHeight: 0
   chunkSize: 8.5
   chunkHeight: 0

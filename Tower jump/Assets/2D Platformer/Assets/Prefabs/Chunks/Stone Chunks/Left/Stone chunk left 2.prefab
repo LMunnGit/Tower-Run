@@ -124,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2666804457893773426, guid: 5b24d61b69486b544bbc8ee090908218, type: 3}
       propertyPath: anchorOffset.x
-      value: -0.85
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: -2666804457893773426, guid: 5b24d61b69486b544bbc8ee090908218, type: 3}
       propertyPath: anchorOffset.y
