@@ -9,10 +9,12 @@ public class ScreenResolutionSizer : MonoBehaviour
     public float screenResolutionWidth = 1080.0f;
     private float newSize;
     private float previousScreenWidth;
+    private PlayerController controller;
 
     void Start()
     {
         previousScreenWidth = 0f;
+        controller = GameObject.Find("Player").GetComponent<PlayerController>();
         // UpdateScale();
     }
 
@@ -36,6 +38,11 @@ public class ScreenResolutionSizer : MonoBehaviour
         float offset;
         offset = naturalObjectSize / newScale / 4;
 
+        if (gameObject.tag == "Player")
+        {
+            float newSpeed = controller.movingSpeed + newScale * 2  - 1.2f;
+            controller.movingSpeed = newSpeed;
+        }
         if (gameObject.tag == "Enemy") // Reposition spikes
         {
             transform.position += Vector3.down * offset / 1.5f;
