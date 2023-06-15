@@ -10,8 +10,11 @@ public class PlatformSpawner : MonoBehaviour
 [SerializeField] private Transform ground;
 [SerializeField] public Transform spawner;
 [SerializeField] public Transform chunks;
-[SerializeField] private GameObject[] platformLeft;
-[SerializeField] private GameObject[] platformRight;
+// Chunks
+[SerializeField] private GameObject[] grassPlatformLeft;
+[SerializeField] private GameObject[] grassPlatformRight;
+[SerializeField] private GameObject[] stonePlatformLeft;
+[SerializeField] private GameObject[] stonePlatformRight;
 
 
 public float towerHeight;
@@ -19,6 +22,8 @@ public float chunkSize;
 public int chunkHeight;
 public bool chunkRight;
 public bool startingChunkRight;
+public int stoneChunkStart;
+public float stoneHeight;
 
 public float x;
 public int num;
@@ -75,10 +80,44 @@ void LateUpdate()
 // Platform spawning script
 void SpawnPlatform()
 {
+    if (chunkHeight >= stoneChunkStart)
+    {
     if (chunkRight == true)
     {
-        num = Random.Range(0, platformRight.Length);
-        var platRight = Instantiate(platformRight[num], new Vector3(x, 0, 0), Quaternion.identity, null);
+        num = Random.Range(0, stonePlatformRight.Length);
+        var platRight = Instantiate(stonePlatformRight[num], new Vector3(x, 0, 0), Quaternion.identity, null);
+
+        platRight.transform.parent = chunks.transform;
+        if (chunkHeight > stoneChunkStart)
+        {
+            spawner.position = new Vector2 (0, stoneHeight);    
+        } else {
+        spawner.position = new Vector2 (0, towerHeight);
+        }
+        platRight.transform.localPosition = new Vector2(x, spawner.position.y);
+
+    } else if (chunkRight == false)
+    {
+        num = Random.Range(0, stonePlatformLeft.Length);
+        var platLeft = Instantiate(stonePlatformLeft[num], new Vector3(x, 0, 0), Quaternion.identity, null);
+
+        platLeft.transform.parent = chunks.transform;
+         if (chunkHeight > stoneChunkStart)
+        {
+            spawner.position = new Vector2 (0, stoneHeight);    
+        } else {
+        spawner.position = new Vector2 (0, towerHeight);
+        }
+        platLeft.transform.localPosition = new Vector2(x, spawner.position.y);
+
+    }   
+    }
+    else if (chunkHeight < stoneChunkStart) // grass platforms
+    {
+    if (chunkRight == true)
+    {
+        num = Random.Range(0, grassPlatformRight.Length);
+        var platRight = Instantiate(grassPlatformRight[num], new Vector3(x, 0, 0), Quaternion.identity, null);
 
         platRight.transform.parent = chunks.transform;
         if (chunkHeight > 1)
@@ -91,8 +130,8 @@ void SpawnPlatform()
 
     } else if (chunkRight == false)
     {
-        num = Random.Range(0, platformLeft.Length);
-        var platLeft = Instantiate(platformLeft[num], new Vector3(x, 0, 0), Quaternion.identity, null);
+        num = Random.Range(0, grassPlatformLeft.Length);
+        var platLeft = Instantiate(grassPlatformLeft[num], new Vector3(x, 0, 0), Quaternion.identity, null);
 
         platLeft.transform.parent = chunks.transform;
          if (chunkHeight > 1)
@@ -104,6 +143,7 @@ void SpawnPlatform()
         platLeft.transform.localPosition = new Vector2(x, spawner.position.y);
 
     }
+    } 
 
     chunkRight = !chunkRight;
     chunkHeight++;
