@@ -8,9 +8,6 @@ public class SaveData
     public static float highScore;
     public static float score;
     public static bool newHighScore;
-    public static int musicToggle;
-    public static int soundToggle;
-    public static bool audio;
 
     public SaveData(ScoreManager scoreManager)
     {
@@ -19,10 +16,19 @@ public class SaveData
         newHighScore = scoreManager.newHighScore;
     }
 
-    public SaveAudio(OptionsManager optionsManager)
-    {
-        musicToggle = optionsManager.musicNum;
-        soundToggle = optionsManager.soundNum;
-        audio = optionsManager.isAudioPlaying;
-    }
 }
+
+//public class SaveAudio
+// {
+    // public static int musicToggle;
+    // public static int soundToggle;
+    // public static bool audio;
+
+    // public SaveAudio(OptionsManager optionsManager)
+    // {
+        // musicToggle = optionsManager.musicNum;
+        // soundToggle = optionsManager.soundNum;
+        // audio = optionsManager.isAudioPlaying;
+    // }
+
+// }

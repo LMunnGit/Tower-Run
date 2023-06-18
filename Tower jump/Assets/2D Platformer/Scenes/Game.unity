@@ -1171,6 +1171,10 @@ MonoBehaviour:
   soundRend: {fileID: 0}
   soundImg: []
   musicImg: []
+  scoreManager: {fileID: 0}
+  musicNum: 0
+  soundNum: 0
+  isAudioPlaying: 0
 --- !u!114 &222446598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5457,6 +5461,10 @@ MonoBehaviour:
   musicImg:
   - {fileID: 21300000, guid: e7770d328da2419428af88d1ccda3639, type: 3}
   - {fileID: 21300000, guid: 43a5bcdb2f72b9a42ac3667d58e3f718, type: 3}
+  scoreManager: {fileID: 519420036}
+  musicNum: 0
+  soundNum: 0
+  isAudioPlaying: 0
 --- !u!82 &1811743309
 AudioSource:
   m_ObjectHideFlags: 0

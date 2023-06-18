@@ -15,9 +15,10 @@ public GameObject options;
 [SerializeField] Image soundRend;
 [SerializeField] Sprite[] soundImg;
 [SerializeField] Sprite[] musicImg;
-private int musicNum;
-private int soundNum;
-private bool isAudioPlaying;
+[SerializeField] ScoreManager scoreManager;
+public int musicNum;
+public int soundNum;
+public bool isAudioPlaying;
 
 void Start()
 {
@@ -46,7 +47,6 @@ public void CloseOptions()
 // Sound button
 public void ToggleSound()
 {
-Debug.Log("sound toggle");
 if (soundNum == 0)
 {
     soundNum = 1;
@@ -62,7 +62,6 @@ UIClick.Play();
 // Music button
 public void ToggleMusic()
 {
-Debug.Log("music toggle");
 if (musicNum == 0)
 {
     musicNum = 1;
@@ -92,4 +91,8 @@ private void ToggleAudioSources()
             }
         }
     }
+
+// Save audio settings
 }
+
+
