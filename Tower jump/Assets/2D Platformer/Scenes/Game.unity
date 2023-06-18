@@ -1769,7 +1769,7 @@ MonoBehaviour:
   Score: {fileID: 10394062}
   HighScore: {fileID: 517276988}
   adsInitializer: {fileID: 1846767120}
-  rewardedAdsButton: {fileID: 0}
+  rewardedAdsButton: {fileID: 751666963}
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0

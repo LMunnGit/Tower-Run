@@ -19,10 +19,10 @@ public class SaveData
         newHighScore = scoreManager.newHighScore;
     }
 
-    public SaveAudio(OptionsManager optionsManager)
-    {
-        musicToggle = optionsManager.musicNum;
-        soundToggle = optionsManager.soundNum;
-        audio = optionsManager.isAudioPlaying;
-    }
+    // public SaveAudio(OptionsManager optionsManager)
+    // {
+        // musicToggle = optionsManager.musicNum;
+        // soundToggle = optionsManager.soundNum;
+        // audio = optionsManager.isAudioPlaying;
+    // }
 }
